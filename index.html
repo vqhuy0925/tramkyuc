@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Trạm Ký Ức - Mẹ Việt Nam Anh Hùng Phường Phước Thới</title>
+  
+  <meta name="description" content="Trạm Ký Ức - Không gian số hóa tri ân và lưu giữ hình ảnh, thông tin 51 Bà mẹ Việt Nam Anh hùng Phường Phước Thới, Quận Ô Môn, Thành phố Cần Thơ." />
+  <meta property="og:title" content="Trạm Ký Ức - Mẹ Việt Nam Anh Hùng Phường Phước Thới" />
+  <meta property="og:description" content="Không gian số hóa đền ơn đáp nghĩa của Tuổi trẻ Đoàn TNCS Hồ Chí Minh Phường Phước Thới." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon Đoàn Thanh Niên -->
+  <link rel="icon" type="image/webp" href="assets/images/logo-doan.webp" />
+  <link rel="apple-touch-icon" href="assets/images/logo-doan.webp" />
+
+  <!-- Google Fonts: Editorial Serif + Modern Crisp Sans-serif (Anti-AI Slop) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Audio Background Player (Hidden Audio Element) -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/huyen-thoai-me.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ==========================================================================
+       SITE HEADER: ĐOÀN THANH NIÊN & NHẠC NỀN
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container-custom header-inner">
+      <!-- Brand & Đoàn TNCS HCM -->
+      <a href="#hero" class="brand-wrapper">
+        <img src="assets/images/logo-doan.webp" alt="Huy hiệu Đoàn TNCS Hồ Chí Minh" class="logo-doan" />
+        <div class="brand-text-col">
+          <span class="brand-tag">Đoàn TNCS Hồ Chí Minh</span>
+          <span class="brand-title">Phường Phước Thới • Ô Môn</span>
+        </div>
+      </a>
+
+      <!-- Navigation & Audio Control -->
+      <div class="header-nav">
+        <button id="musicToggleBtn" class="music-toggle-btn" type="button" title="Bật/Tắt nhạc nền bài ca Huyền thoại Mẹ">
+          <div class="eq-bars">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+          <span id="musicLabel">Bật nhạc tưởng niệm</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO BANNER: TRẠM KÝ ỨC
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <img src="assets/images/lotus-corner.png" alt="Hoa sen" class="hero-lotus-watermark" />
+    <div class="container-custom hero-content">
+      <div class="hero-badge">
+        <span>Đền ơn đáp nghĩa • Uống nước nhớ nguồn</span>
+      </div>
+
+      <h1 class="hero-title">
+        TRẠM KÝ ỨC
+        <span>TRI ÂN 51 BÀ MẸ VIỆT NAM ANH HÙNG PHƯỜNG PHƯỚC THỚI</span>
+      </h1>
+
+      <p class="hero-desc">
+        Nơi lưu giữ ngàn đời những hình ảnh, chiến công và sự hy sinh thầm lặng của các Mẹ. 
+        Đất nước thanh bình nở hoa hôm nay kết tinh từ những giọt nước mắt và máu xương của bao người Mẹ Việt Nam.
+      </p>
+
+      <!-- ==========================================================================
+           120% SIGNATURE DETAIL: BÀN THỜ ẢO & THẮP NÉN TÂM HƯƠNG TRI ÂN
+           ========================================================================== -->
+      <div class="tribute-altar-box">
+        <div class="corner-ornament corner-tl"></div>
+        <div class="corner-ornament corner-tr"></div>
+        <div class="corner-ornament corner-bl"></div>
+        <div class="corner-ornament corner-br"></div>
+
+        <h2 class="altar-title">KHÔNG GIAN DÂNG HƯƠNG TƯỞNG NIỆM</h2>
+        <p class="altar-subtext">
+          Xin kính cẩn nghiêng mình trước anh linh các Mẹ. Mỗi lượt chạm là một nén tâm hương thắp sáng lòng tri ân của thế hệ hôm nay.
+        </p>
+
+        <!-- Incense Urn & Smoke Visual -->
+        <div class="altar-visual-center">
+          <canvas id="smokeCanvas" class="smoke-canvas"></canvas>
+          <div class="incense-sticks">
+            <div class="stick"><span class="stick-tip"></span></div>
+            <div class="stick"><span class="stick-tip"></span></div>
+            <div class="stick"><span class="stick-tip"></span></div>
+          </div>
+          <img src="assets/images/incense-urn.svg" alt="Lư hương đồng tưởng niệm" class="urn-img" />
+        </div>
+
+        <!-- Realtime Counter -->
+        <div class="counter-badge-wrap">
+          <span class="counter-num" id="candleCounter">1.954</span>
+          <span class="counter-label">Nén tâm hương đã thắp</span>
+        </div>
+
+        <!-- Action Button -->
+        <div>
+          <button id="lightCandleBtn" class="tribute-action-btn" type="button">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-.5 0-1 .4-1 .9 0 .2.1.4.2.6C10.5 4.6 9 7.2 9 10c0 1.7.7 3.2 1.8 4.2C10.3 14.5 10 15 10 15.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-.5-.3-1-.8-1.3 1.1-1 1.8-2.5 1.8-4.2 0-2.8-1.5-5.4-2.2-6.5.1-.2.2-.4.2-.6 0-.5-.5-.9-1-.9zm-7 16v4h14v-4H5z"/></svg>
+            THẮP NÉN TÂM HƯƠNG
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STATISTICS STRIP
+       ========================================================================== -->
+  <section class="stat-strip">
+    <div class="container-custom">
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-val">51</div>
+          <div class="stat-lbl">Bà Mẹ Việt Nam Anh Hùng</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">100%</div>
+          <div class="stat-lbl">Cống hiến trọn đời cho Tổ quốc</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">Muôn Đời</div>
+          <div class="stat-lbl">Khắc ghi công ơn các Mẹ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALLERY OF 51 MOTHERS OF PHUOC THOI
+       ========================================================================== -->
+  <section id="mothers" class="gallery-section">
+    <div class="container-custom">
+      <div class="section-head-center">
+        <span class="section-badge">Danh mục di tích lịch sử</span>
+        <h2 class="section-title">DANH SÁCH 51 MẸ VIỆT NAM ANH HÙNG</h2>
+        <p class="section-desc">Phường Phước Thới, Quận Ô Môn, Thành phố Cần Thơ</p>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="filter-search-card">
+        <div class="search-input-wrap">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input 
+            type="text" 
+            id="searchMother" 
+            class="search-field" 
+            placeholder="Tìm theo tên Mẹ (ví dụ: Nguyễn Thị Ba, Huệ...) hoặc tên Liệt sĩ..." 
+          />
+        </div>
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all" type="button">Tất cả (51)</button>
+          <button class="filter-btn" data-filter="portrait" type="button">Có ảnh chân dung</button>
+          <button class="filter-btn" data-filter="truy-tang" type="button">Được truy tặng</button>
+          <button class="filter-btn" data-filter="phong-tang" type="button">Được phong tặng</button>
+        </div>
+      </div>
+
+      <!-- Card Grid -->
+      <div id="mothersGrid" class="mothers-grid">
+        <!-- Render bằng JavaScript từ MOTHERS_DATA -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ONLINE GUESTBOOK / SỔ LƯU BÚT TRI ÂN TRỰC TUYẾN
+       ========================================================================== -->
+  <section id="guestbook" class="guestbook-section">
+    <div class="container-custom">
+      <div class="section-head-center">
+        <span class="section-badge">Không gian tâm tình</span>
+        <h2 class="section-title">SỔ LƯU BÚT TRI ÂN TRỰC TUYẾN</h2>
+        <p class="section-desc">
+          Xin gửi gắm những dòng tâm sự, lời biết ơn sâu sắc của thế hệ trẻ và nhân dân đến các Mẹ và các anh hùng liệt sĩ.
+        </p>
+      </div>
+
+      <div class="guestbook-layout">
+        <!-- Guestbook Form -->
+        <div class="guestbook-form-card">
+          <h3 class="serif-font" style="font-size: 1.3rem; color: var(--color-primary); margin-bottom: 1.25rem;">
+            Gửi Lời Tri Ân Dâng Mẹ
+          </h3>
+          <form id="guestbookForm">
+            <div class="form-group">
+              <label for="guestAuthor" class="form-label">Họ và tên của bạn *</label>
+              <input type="text" id="guestAuthor" class="form-input" placeholder="Ví dụ: Nguyễn Văn A" required />
+            </div>
+            <div class="form-group">
+              <label for="guestOrg" class="form-label">Đơn vị / Chi đoàn / Trường học</label>
+              <input type="text" id="guestOrg" class="form-input" placeholder="Ví dụ: Chi đoàn Khu vực Thới Hòa" />
+            </div>
+            <div class="form-group">
+              <label for="guestContent" class="form-label">Lời tri ân sâu sắc *</label>
+              <textarea id="guestContent" class="form-textarea" placeholder="Viết những cảm nghĩ, lòng biết ơn của bạn gửi đến các Mẹ Việt Nam Anh Hùng..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit-guestbook">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              GHI VÀO SỔ LƯU BÚT
+            </button>
+          </form>
+        </div>
+
+        <!-- Guestbook Entries List -->
+        <div>
+          <h3 class="serif-font" style="font-size: 1.3rem; color: var(--color-text-main); margin-bottom: 1.25rem;">
+            Dòng Ký Ức & Tri Ân Mới Nhất
+          </h3>
+          <div id="guestbookEntries" class="entries-container">
+            <!-- Render bằng JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER & CITATIONS
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container-custom">
+      <div class="footer-content">
+        <div>
+          <h3 class="footer-brand-title">TRẠM KÝ ỨC - MẸ VIỆT NAM ANH HÙNG</h3>
+          <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.6;">
+            Công trình số hóa lịch sử chào mừng kỷ niệm các ngày lễ lớn của Đất Nước, do 
+            <strong>Đoàn TNCS Hồ Chí Minh Phường Phước Thới</strong> phối hợp cùng Ban Chỉ đạo công tác Đền ơn đáp nghĩa quận Ô Môn thực hiện.
+          </p>
+          <div class="footer-citation-box">
+            <strong style="color: var(--color-gold-bright);">Nguồn tư liệu & Hình ảnh:</strong><br />
+            Trích từ sách <em>"Bà mẹ Việt Nam Anh hùng thành phố Cần Thơ Tập II (2013 - 2020)"</em> - Ban Tuyên giáo Thành ủy Cần Thơ.<br />
+            <span style="opacity: 0.85; font-size: 0.82rem;">* Nội dung và tư liệu hình ảnh đang tiếp tục được sưu tầm và cập nhật bổ sung.</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color: #F8FAFC; font-size: 1.05rem; margin-bottom: 0.75rem; font-family: var(--font-serif);">
+            Đoàn TNCS Hồ Chí Minh Phường Phước Thới
+          </h4>
+          <p style="font-size: 0.88rem; line-height: 1.8; color: #94A3B8;">
+            📍 <strong>Địa chỉ:</strong> Phường Phước Thới, Quận Ô Môn, Thành phố Cần Thơ<br />
+            ✉️ <strong>Đóng góp tư liệu:</strong> Đoàn viên, thân nhân gia đình có hình ảnh, tư liệu thêm về các Mẹ xin vui lòng liên hệ Ban Chấp hành Đoàn phường để cùng cập nhật.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Trạm Ký Ức - Phường Phước Thới, Quận Ô Môn, TP. Cần Thơ. Đời đời nhớ ơn các Mẹ Việt Nam Anh Hùng.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       3-ZONE MOBILE FLEXBOX MODAL CHI TIẾT TIỂU SỬ MẸ VNAH
+       ========================================================================== -->
+  <div id="motherModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalMotherName">
+    <div class="modal-box">
+      <!-- Zone 1: Header (shrink-0) -->
+      <div class="modal-header">
+        <div class="modal-header-title">Hồ Sơ Ký Ức</div>
+        <button id="modalCloseBtn" class="modal-close-btn" type="button" aria-label="Đóng">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Zone 2: Body (flex-1 overflow-y-auto min-h-0) -->
+      <div class="modal-body">
+        <div class="modal-mother-lead">
+          <div class="modal-photo-frame">
+            <img id="modalMotherPhoto" src="assets/images/default-mother.svg" alt="Chân dung Mẹ" class="modal-photo" />
+          </div>
+          <div class="modal-lead-info">
+            <span id="modalMotherTitle" class="modal-m-title">Bà Mẹ Việt Nam Anh Hùng</span>
+            <h2 id="modalMotherName" class="modal-m-name">MẸ NGUYỄN THỊ BA</h2>
+            <span id="modalMotherYears" class="modal-m-years">1910 - 1991</span>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-row">
+            <div class="detail-lbl">Địa chỉ & Quê quán</div>
+            <div id="modalMotherHometown" class="detail-val">Phường Phước Thới, Quận Ô Môn, TP. Cần Thơ</div>
+          </div>
+          <div class="detail-row">
+            <div class="detail-lbl">Công trạng & Sự hy sinh của thân nhân</div>
+            <div id="modalMotherRelatives" class="detail-val">Có 2 con là liệt sĩ anh dũng hy sinh vì độc lập dân tộc.</div>
+          </div>
+        </div>
+
+        <div id="modalMotherCitation" class="citation-notice">
+          Nguồn trích lục từ sách "Bà mẹ Việt Nam Anh hùng thành phố Cần Thơ Tập II (2013-2020)".
+        </div>
+      </div>
+
+      <!-- Zone 3: Footer (shrink-0 with iOS Safe Area) -->
+      <div class="modal-footer">
+        <button id="modalDismissBtn" class="btn-secondary" type="button">Đóng</button>
+        <button id="altarThisMotherBtn" class="btn-primary-altar" type="button">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-.5 0-1 .4-1 .9 0 .2.1.4.2.6C10.5 4.6 9 7.2 9 10c0 1.7.7 3.2 1.8 4.2C10.3 14.5 10 15 10 15.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-.5-.3-1-.8-1.3 1.1-1 1.8-2.5 1.8-4.2 0-2.8-1.5-5.4-2.2-6.5.1-.2.2-.4.2-.6 0-.5-.5-.9-1-.9zm-7 16v4h14v-4H5z"/></svg>
+          Thắp hương dâng Mẹ
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/mothers-data.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
