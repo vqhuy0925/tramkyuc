@@ -1,7 +1,7 @@
 /**
  * Danh sách Bà mẹ Việt Nam Anh hùng TP. Cần Thơ (Tập II: 2013 - 2020)
  * Trích xuất 1-đối-1 trực tiếp từ file PDF tư liệu:
- * - Phường Phước Thới (Quận Ô Môn): 51 Mẹ (Trang PDF 3 - 53, Trang sách 269 - 319)
+ * - Phường Phước Thới: 51 Mẹ (Trang PDF 3 - 53, Trang sách 269 - 319)
  * - Quận Thốt Nốt: 12 Mẹ (Trang PDF 56 - 67, Trang sách 322 - 333)
  * - Huyện Phong Điền: 133 Mẹ (Trang PDF 70 - 202, Trang sách 336 - 468)
  * Tổng cộng: 196 Mẹ VNAH.
@@ -21,7 +21,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_003.jpg",
     "page_pdf": 3,
     "page_book": 269,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -37,7 +37,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_004.jpg",
     "page_pdf": 4,
     "page_book": 270,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -53,7 +53,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_005.jpg",
     "page_pdf": 5,
     "page_book": 271,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -69,7 +69,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_006.jpg",
     "page_pdf": 6,
     "page_book": 272,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -85,7 +85,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_007.jpg",
     "page_pdf": 7,
     "page_book": 273,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -101,7 +101,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_008.jpg",
     "page_pdf": 8,
     "page_book": 274,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -117,7 +117,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_009.jpg",
     "page_pdf": 9,
     "page_book": 275,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -133,7 +133,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_010.jpg",
     "page_pdf": 10,
     "page_book": 276,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -149,7 +149,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_011.jpg",
     "page_pdf": 11,
     "page_book": 277,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -165,7 +165,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_012.jpg",
     "page_pdf": 12,
     "page_book": 278,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -181,7 +181,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_013.jpg",
     "page_pdf": 13,
     "page_book": 279,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -197,7 +197,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_014.jpg",
     "page_pdf": 14,
     "page_book": 280,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -213,7 +213,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_015.jpg",
     "page_pdf": 15,
     "page_book": 281,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -229,7 +229,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_016.jpg",
     "page_pdf": 16,
     "page_book": 282,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -245,7 +245,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_017.png",
     "page_pdf": 17,
     "page_book": 283,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -261,7 +261,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_018.jpg",
     "page_pdf": 18,
     "page_book": 284,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -277,7 +277,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_019.jpg",
     "page_pdf": 19,
     "page_book": 285,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -293,7 +293,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_020.jpg",
     "page_pdf": 20,
     "page_book": 286,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -309,7 +309,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_021.jpg",
     "page_pdf": 21,
     "page_book": 287,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -325,7 +325,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_022.jpg",
     "page_pdf": 22,
     "page_book": 288,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -341,7 +341,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_023.jpg",
     "page_pdf": 23,
     "page_book": 289,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -357,7 +357,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_024.jpg",
     "page_pdf": 24,
     "page_book": 290,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -373,7 +373,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_025.jpg",
     "page_pdf": 25,
     "page_book": 291,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -389,7 +389,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_026.jpg",
     "page_pdf": 26,
     "page_book": 292,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -405,7 +405,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_027.jpg",
     "page_pdf": 27,
     "page_book": 293,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -421,7 +421,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_028.jpg",
     "page_pdf": 28,
     "page_book": 294,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -437,7 +437,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_029.jpg",
     "page_pdf": 29,
     "page_book": 295,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -453,7 +453,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_030.jpg",
     "page_pdf": 30,
     "page_book": 296,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -469,7 +469,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_031.jpg",
     "page_pdf": 31,
     "page_book": 297,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -485,7 +485,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_032.jpg",
     "page_pdf": 32,
     "page_book": 298,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -501,7 +501,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_033.jpg",
     "page_pdf": 33,
     "page_book": 299,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -517,7 +517,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_034.jpg",
     "page_pdf": 34,
     "page_book": 300,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -533,7 +533,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_035.jpg",
     "page_pdf": 35,
     "page_book": 301,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -549,7 +549,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_036.jpg",
     "page_pdf": 36,
     "page_book": 302,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -565,7 +565,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_037.jpg",
     "page_pdf": 37,
     "page_book": 303,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -581,7 +581,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_038.jpg",
     "page_pdf": 38,
     "page_book": 304,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -597,7 +597,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_039.jpg",
     "page_pdf": 39,
     "page_book": 305,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -613,7 +613,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_040.jpg",
     "page_pdf": 40,
     "page_book": 306,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -629,7 +629,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_041.jpg",
     "page_pdf": 41,
     "page_book": 307,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -645,7 +645,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_042.jpg",
     "page_pdf": 42,
     "page_book": 308,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -661,7 +661,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_043.jpg",
     "page_pdf": 43,
     "page_book": 309,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -677,7 +677,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_044.jpg",
     "page_pdf": 44,
     "page_book": 310,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -693,7 +693,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_045.jpg",
     "page_pdf": 45,
     "page_book": 311,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -709,7 +709,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_046.jpg",
     "page_pdf": 46,
     "page_book": 312,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -725,7 +725,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_047.jpg",
     "page_pdf": 47,
     "page_book": 313,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -741,7 +741,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_048.jpg",
     "page_pdf": 48,
     "page_book": 314,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -757,7 +757,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_049.jpg",
     "page_pdf": 49,
     "page_book": 315,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -773,7 +773,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_050.png",
     "page_pdf": 50,
     "page_book": 316,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -789,7 +789,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_051.jpg",
     "page_pdf": 51,
     "page_book": 317,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -805,7 +805,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_052.jpg",
     "page_pdf": 52,
     "page_book": 318,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
@@ -821,7 +821,7 @@ const MOTHERS_DATA = [
     "photo": "assets/images/mothers/page_053.jpg",
     "page_pdf": 53,
     "page_book": 319,
-    "district": "Phường Phước Thới, Quận Ô Môn",
+    "district": "Phường Phước Thới",
     "is_phuoc_thoi": true
   },
   {
