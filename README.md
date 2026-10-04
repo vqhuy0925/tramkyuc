@@ -1,7 +1,7 @@
 # TRẠM KÝ ỨC - MẸ VIỆT NAM ANH HÙNG PHƯỜNG PHƯỚC THỚI
 
 > **Công trình số hóa lịch sử và đền ơn đáp nghĩa** do Đoàn TNCS Hồ Chí Minh Phường Phước Thới phối hợp thực hiện.  
-> Lưu giữ hình ảnh, công trạng và lòng biết ơn của thế hệ trẻ đối với **51 Bà mẹ Việt Nam Anh hùng (VNAH)** của quê hương Phước Thới, Quận Ô Môn, Thành phố Cần Thơ.
+> Lưu giữ hình ảnh, công trạng và lòng biết ơn của thế hệ trẻ đối với **51 Bà mẹ Việt Nam Anh hùng (VNAH)** của quê hương Phước Thới, Thành phố Cần Thơ.
 
 ---
 
