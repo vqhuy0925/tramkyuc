@@ -222,25 +222,26 @@ function initMothersGallery() {
 
   if (!grid || typeof MOTHERS_DATA === "undefined") return;
 
-  let currentFilter = "all";
+  // Mặc định hiển thị danh sách 51 Mẹ VNAH Phường Phước Thới
+  let currentFilter = "phuoc-thoi";
   let searchKeyword = "";
 
   const renderCards = () => {
     grid.innerHTML = "";
 
     const filtered = MOTHERS_DATA.filter((m) => {
-      // 1. Lọc theo danh mục
-      if (currentFilter === "portrait") {
-        if (!m.photo || m.photo.includes("default-mother") || m.photo.includes("photo_010") || m.photo.includes("photo_011") || m.photo.includes("photo_012")) return false;
-      } else if (currentFilter === "truy-tang") {
-        if (!m.title.toLowerCase().includes("truy")) return false;
-      } else if (currentFilter === "phong-tang") {
-        if (!m.title.toLowerCase().includes("phong")) return false;
+      // 1. Lọc theo danh mục/địa bàn
+      if (currentFilter === "phuoc-thoi") {
+        if (!m.is_phuoc_thoi) return false;
+      } else if (currentFilter === "thot-not") {
+        if (!m.district || !m.district.includes("Thốt Nốt")) return false;
+      } else if (currentFilter === "phong-dien") {
+        if (!m.district || !m.district.includes("Phong Điền")) return false;
       }
 
-      // 2. Tìm kiếm theo từ khóa
+      // 2. Tìm kiếm theo từ khóa (tên Mẹ, con liệt sĩ, quê quán, số trang...)
       if (searchKeyword) {
-        const fullSearchStr = `${m.name} ${m.relatives} ${m.hometown}`.toLowerCase();
+        const fullSearchStr = `${m.name} ${m.relatives} ${m.hometown} ${m.worship_address} ${m.district} trang ${m.page_book} ${m.page_book}`.toLowerCase();
         return fullSearchStr.includes(searchKeyword);
       }
 
@@ -251,7 +252,7 @@ function initMothersGallery() {
       grid.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--color-text-muted);">
           <p style="font-size: 1.1rem; font-weight: 600;">Không tìm thấy thông tin Mẹ phù hợp</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem;">Vui lòng thử tìm kiếm theo từ khóa khác hoặc bấm nút "Tất cả"</p>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem;">Vui lòng thử tìm theo từ khóa khác hoặc bấm chọn tab "Tất cả tư liệu"</p>
         </div>
       `;
       return;
@@ -262,7 +263,6 @@ function initMothersGallery() {
       card.className = "mother-card";
       card.setAttribute("data-stt", mother.stt);
 
-      // Ảnh hiển thị (nếu lỗi đường dẫn tự chuyển sang ảnh đại diện hoa sen mặc định)
       const imgSrc = mother.photo || "assets/images/default-mother.svg";
 
       card.innerHTML = `
@@ -276,11 +276,12 @@ function initMothersGallery() {
           />
           <span class="card-badge-top">${mother.title}</span>
           <span class="card-stt-badge">#${mother.stt}</span>
+          <span class="card-page-badge" title="Trang trong sách gốc">Trang ${mother.page_book}</span>
         </div>
         <div class="card-body">
           <h3 class="mother-name">${mother.name}</h3>
-          <p class="mother-meta">${mother.birth_death || "Phường Phước Thới"}</p>
-          <p class="mother-excerpt">${mother.relatives || mother.hometown}</p>
+          <p class="mother-meta">${mother.birth_death ? `(${mother.birth_death})` : ""} • ${mother.district || "TP. Cần Thơ"}</p>
+          <p class="mother-excerpt">${mother.relatives || mother.hometown || "Bà mẹ Việt Nam Anh hùng TP. Cần Thơ"}</p>
           <button class="card-action-btn" type="button">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
             Kính cẩn tri ân
@@ -326,20 +327,47 @@ function openMotherModal(mother) {
   const mTitle = document.getElementById("modalMotherTitle");
   const mYears = document.getElementById("modalMotherYears");
   const mPhoto = document.getElementById("modalMotherPhoto");
+  const mDistrict = document.getElementById("modalMotherDistrict");
   const mHometown = document.getElementById("modalMotherHometown");
   const mRelatives = document.getElementById("modalMotherRelatives");
+  const mDecision = document.getElementById("modalMotherDecision");
+  const rowDecision = document.getElementById("rowMotherDecision");
+  const mWorship = document.getElementById("modalMotherWorship");
+  const rowWorship = document.getElementById("rowMotherWorship");
   const mCitation = document.getElementById("modalMotherCitation");
   const altarThisMotherBtn = document.getElementById("altarThisMotherBtn");
 
-  mName.textContent = mother.name;
-  mTitle.textContent = mother.title + " danh hiệu Bà Mẹ VNAH";
+  mName.textContent = "MẸ " + mother.name.toUpperCase();
+  mTitle.textContent = (mother.title || "Vinh danh") + " danh hiệu Bà Mẹ Việt Nam Anh Hùng";
   mYears.textContent = mother.birth_death ? `(${mother.birth_death})` : "";
   mPhoto.src = mother.photo || "assets/images/default-mother.svg";
   mPhoto.onerror = () => { mPhoto.src = "assets/images/default-mother.svg"; };
 
-  mHometown.textContent = mother.hometown;
-  mRelatives.textContent = mother.relatives;
-  mCitation.textContent = `Tư liệu số hóa: Sách "Bà mẹ Việt Nam Anh hùng thành phố Cần Thơ Tập II (2013-2020)" - Ban Tuyên giáo Thành ủy Cần Thơ.`;
+  if (mDistrict) mDistrict.textContent = mother.district || "TP. Cần Thơ";
+  if (mHometown) mHometown.textContent = mother.hometown || "Đang tiếp tục cập nhật";
+  if (mRelatives) mRelatives.textContent = mother.relatives || "Đang tiếp tục cập nhật";
+
+  if (mDecision && rowDecision) {
+    if (mother.decision) {
+      mDecision.textContent = mother.decision;
+      rowDecision.style.display = "";
+    } else {
+      rowDecision.style.display = "none";
+    }
+  }
+
+  if (mWorship && rowWorship) {
+    if (mother.worship_address) {
+      mWorship.textContent = mother.worship_address;
+      rowWorship.style.display = "";
+    } else {
+      rowWorship.style.display = "none";
+    }
+  }
+
+  if (mCitation) {
+    mCitation.textContent = `Nguồn tư liệu: Sách "Bà mẹ Việt Nam Anh hùng thành phố Cần Thơ Tập II (2013-2020)", Trang ${mother.page_book} (PDF trang ${mother.page_pdf}) - Ban Tuyên giáo Thành ủy Cần Thơ.`;
+  }
 
   // Nút thắp hương dâng riêng Mẹ
   if (altarThisMotherBtn) {
@@ -354,7 +382,7 @@ function openMotherModal(mother) {
   }
 
   overlay.classList.add("active");
-  document.body.style.overflow = "hidden"; // Ngăn cuộn trang phía sau
+  document.body.style.overflow = "hidden";
 }
 
 function closeMotherModal() {
