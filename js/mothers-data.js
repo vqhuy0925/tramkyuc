@@ -1,32 +1,16 @@
 /**
- * Danh sách Bà mẹ Việt Nam Anh hùng TP. Cần Thơ (Tập II: 2013 - 2020)
- * Trích xuất 1-đối-1 trực tiếp từ file PDF tư liệu:
- * - Phường Phước Thới: 51 Mẹ (Trang PDF 3 - 53, Trang sách 269 - 319)
+ * Danh sách Bà mẹ Việt Nam Anh hùng TP. Cần Thơ
+ * Cập nhật bổ sung tư liệu:
+ * - Phường Phước Thới: 47 Mẹ (31 Mẹ theo Sách Tập II + 16 Mẹ bổ sung theo Danh sách tổng hợp UBND Phường)
  * - Quận Thốt Nốt: 12 Mẹ (Trang PDF 56 - 67, Trang sách 322 - 333)
  * - Huyện Phong Điền: 133 Mẹ (Trang PDF 70 - 202, Trang sách 336 - 468)
- * Tổng cộng: 196 Mẹ VNAH.
+ * Tổng cộng: 192 Mẹ VNAH.
  */
 
 const MOTHERS_DATA = [
   {
     "id": 1,
     "stt": 1,
-    "name": "NGUYỄN THỊ BA",
-    "title": "Truy tặng",
-    "birth_death": "1910 - 1991",
-    "hometown": "Thị trấn Ô Môn, huyện Ô Môn, thành phố Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Văn Nê (con), hy sinh ngày 24/9/1968 + Liệt sĩ Nguyễn Văn Mến (con), hy sinh tháng 4/1970",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_003.jpg",
-    "page_pdf": 3,
-    "page_book": 269,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 2,
-    "stt": 2,
     "name": "NGUYỄN THỊ BA",
     "title": "Truy tặng",
     "birth_death": "1916 - 2004",
@@ -41,40 +25,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 3,
-    "stt": 3,
-    "name": "NGUYỄN THỊ BẢY",
-    "title": "Truy tặng",
-    "birth_death": "1910 - 1991",
-    "hometown": "Thị trấn Ô Môn, huyện Ô Môn, tỉnh Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Trịnh Quang Vĩ (chồng), hy sinh ngày 10/7/1959 + Liệt sĩ Trịnh Thị Bê (con), hy sinh ngày 23/9/1968",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_005.jpg",
-    "page_pdf": 5,
-    "page_book": 271,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 4,
-    "stt": 4,
-    "name": "TRƯƠNG THỊ BẢY",
-    "title": "Truy tặng",
-    "birth_death": "1940 - từ trần",
-    "hometown": "Xã Thới Lai, huyện Ô Môn, tỉnh Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Lê Văn Phái (con), hy sinh ngày 12/10/1947 + Liệt sĩ Lê Văn Kiếm (con), hy sinh năm 1962",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_006.jpg",
-    "page_pdf": 6,
-    "page_book": 272,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 5,
-    "stt": 5,
+    "id": 2,
+    "stt": 2,
     "name": "LÝ THỊ CAM",
     "title": "Truy tặng",
     "birth_death": "1916 - 1963",
@@ -89,8 +41,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 6,
-    "stt": 6,
+    "id": 3,
+    "stt": 3,
     "name": "HUỲNH THỊ CHẮC",
     "title": "Truy tặng",
     "birth_death": "1889 - 1970",
@@ -105,8 +57,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 7,
-    "stt": 7,
+    "id": 4,
+    "stt": 4,
     "name": "NGUYỄN THỊ CHÍNH",
     "title": "Truy tặng",
     "birth_death": "1905 - 1991",
@@ -121,24 +73,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 8,
-    "stt": 8,
-    "name": "NGUYỄN THỊ CHUẨN",
-    "title": "Truy tặng",
-    "birth_death": "1911 - 1987",
-    "hometown": "Xã Thới Thạnh, huyện Ô Môn, tỉnh Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Văn Thấy (con), hy sinh ngày 25/7/1960 + Liệt sĩ Nguyễn Văn Xiêm (con), hy sinh ngày 14/01/1964",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_010.jpg",
-    "page_pdf": 10,
-    "page_book": 276,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 9,
-    "stt": 9,
+    "id": 5,
+    "stt": 5,
     "name": "LÊ THỊ CÓ",
     "title": "Truy tặng",
     "birth_death": "1921 - 2006",
@@ -153,24 +89,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 10,
-    "stt": 10,
-    "name": "PHAN THỊ CỰ",
-    "title": "Truy tặng",
-    "birth_death": "1909 - 1986",
-    "hometown": "Xã Tân An Thạnh, huyện Bình Tân, tỉnh Vĩnh Long",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Văn Huynh (chồng), hy sinh ngày 28/02/1972 + Liệt sĩ Nguyễn Văn Phượu (con), hy sinh ngày 20/8/1961",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_012.jpg",
-    "page_pdf": 12,
-    "page_book": 278,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 11,
-    "stt": 11,
+    "id": 6,
+    "stt": 6,
     "name": "NGUYỄN THỊ CƯNG",
     "title": "Truy tặng",
     "birth_death": "Chưa rõ",
@@ -185,8 +105,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 12,
-    "stt": 12,
+    "id": 7,
+    "stt": 7,
     "name": "QUẢNG THỊ DẬU",
     "title": "Truy tặng",
     "birth_death": "1916 - 2008",
@@ -201,8 +121,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 13,
-    "stt": 13,
+    "id": 8,
+    "stt": 8,
     "name": "NGUYỄN THỊ ĐÁNG",
     "title": "Truy tặng",
     "birth_death": "1885 - 1990",
@@ -217,8 +137,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 14,
-    "stt": 14,
+    "id": 9,
+    "stt": 9,
     "name": "TRẦN THỊ ĐÁNG",
     "title": "Truy tặng",
     "birth_death": "1916 - 2008",
@@ -233,56 +153,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 15,
-    "stt": 15,
-    "name": "LÊ THỊ ĐIỂM",
-    "title": "Truy tặng",
-    "birth_death": "1912 - 1992",
-    "hometown": "Thị trấn Ô Môn, huyện Ô Môn, tỉnh Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Phan Thanh Vân (con), hy sinh ngày 16/11/1964 + Liệt sĩ Phương Văn Đạm (con), hy sinh ngày 29/9/1971",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, t h ành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_017.png",
-    "page_pdf": 17,
-    "page_book": 283,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 16,
-    "stt": 16,
-    "name": "NGUYỄN THỊ ĐIỂM",
-    "title": "Truy tặng",
-    "birth_death": "1908 - 1939",
-    "hometown": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 300/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Ngô Bá Gia (con), hy sinh ngày 21/9/1962 + Liệt sĩ Ngô Bá Hòa (con), hy sinh năm 1971",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_018.jpg",
-    "page_pdf": 18,
-    "page_book": 284,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 17,
-    "stt": 17,
-    "name": "TRẦN THỊ ĐÔI",
-    "title": "Truy tặng",
-    "birth_death": "1920 - 1999",
-    "hometown": "Phường Thới An, quận Ô Môn, thành phố Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Lê Văn Tư ( con), hy sinh ngày 17/7/1967 + Liệt sĩ Lê Văn Lợi (con), hy sinh ngày 16/4/1970",
-    "worship_address": "Phường Thới An, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_019.jpg",
-    "page_pdf": 19,
-    "page_book": 285,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 18,
-    "stt": 18,
+    "id": 10,
+    "stt": 10,
     "name": "PHẠM THỊ ĐỐI",
     "title": "Truy tặng",
     "birth_death": "1916 - 2002",
@@ -297,24 +169,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 19,
-    "stt": 19,
-    "name": "TRẦN THỊ GIANG",
-    "title": "Truy tặng",
-    "birth_death": "1924 - 2007",
-    "hometown": "Xã Thới Thạnh, huyện Thới Lai, thành phố Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Lê Văn Út (c hồng), hy sinh tháng 11/1971 + Liệt sĩ Lê Văn Xinh (con), hy sinh tháng 10/1970",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_021.jpg",
-    "page_pdf": 21,
-    "page_book": 287,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 20,
-    "stt": 20,
+    "id": 11,
+    "stt": 11,
     "name": "NGUYỄN THỊ GIỎI",
     "title": "Truy tặng",
     "birth_death": "1902 - 2000",
@@ -329,24 +185,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 21,
-    "stt": 21,
-    "name": "PHẠM THỊ HAI",
-    "title": "Truy tặng",
-    "birth_death": "1903 - 1985",
-    "hometown": "Xã Thới Thạnh, huyện Ô Môn, tỉnh Hậu Giang",
-    "decision": "Mẹ được truy tặng theo Quyết định số 2887/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Phát Sóc (con), hy sinh ngày 11/4/1959 + Liệt sĩ Nguyễn Văn Tư (con), hy sinh năm 1965",
-    "worship_address": "Phường Thới Hòa, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_023.jpg",
-    "page_pdf": 23,
-    "page_book": 289,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 22,
-    "stt": 22,
+    "id": 12,
+    "stt": 12,
     "name": "NGUYỄN THỊ HẠNH",
     "title": "Truy tặng",
     "birth_death": "1908 - 1993",
@@ -361,8 +201,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 23,
-    "stt": 23,
+    "id": 13,
+    "stt": 13,
     "name": "NGUYỄN THỊ HIẾN",
     "title": "Truy tặng",
     "birth_death": "1918 - 2014",
@@ -377,8 +217,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 24,
-    "stt": 24,
+    "id": 14,
+    "stt": 14,
     "name": "PHAN THỊ HIỂN",
     "title": "Truy tặng",
     "birth_death": "1914 - 1965",
@@ -393,24 +233,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 25,
-    "stt": 25,
-    "name": "TRẦN THỊ HOA",
-    "title": "Truy tặng",
-    "birth_death": "1926 - 2000",
-    "hometown": "Xã Trường Xuân, huyện Ô Môn, tỉnh Hậu Giang",
-    "decision": "Mẹ được truy tặng theo Quyết định số 2547/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Văn Quân (con), hy sinh ngày 09/12/1967 + Liệt sĩ Nguyễn Văn Thông (con), hy sinh ngày 01/7/1971",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_027.jpg",
-    "page_pdf": 27,
-    "page_book": 293,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 26,
-    "stt": 26,
+    "id": 15,
+    "stt": 15,
     "name": "TRẦN THỊ HƠN",
     "title": "Truy tặng",
     "birth_death": "1910 - 2001",
@@ -425,8 +249,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 27,
-    "stt": 27,
+    "id": 16,
+    "stt": 16,
     "name": "NGUYỄN THỊ HUỆ",
     "title": "Truy tặng",
     "birth_death": "1922 - 2007",
@@ -441,8 +265,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 28,
-    "stt": 28,
+    "id": 17,
+    "stt": 17,
     "name": "NGUYỄN THỊ HUI",
     "title": "Truy tặng",
     "birth_death": "1907 - 1945",
@@ -457,24 +281,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 29,
-    "stt": 29,
-    "name": "TRƯƠNG THỊ HƯƠNG",
-    "title": "Truy tặng",
-    "birth_death": "1900 - 1990",
-    "hometown": "Phường Thới An, quận Ô Môn, thành phố Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Văn Tuấn (con), hy sinh tháng 02/1960 + Liệt sĩ Nguyễn Văn Thâu (con), hy sinh ngày 08/4/1971",
-    "worship_address": "Phường Thới An, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_031.jpg",
-    "page_pdf": 31,
-    "page_book": 297,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 30,
-    "stt": 30,
+    "id": 18,
+    "stt": 18,
     "name": "NGUYỄN THỊ HƯỜNG",
     "title": "Phong tặng",
     "birth_death": "1931 - 2020",
@@ -489,8 +297,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 31,
-    "stt": 31,
+    "id": 19,
+    "stt": 19,
     "name": "TRẦN THỊ KIM",
     "title": "Truy tặng",
     "birth_death": "1900 - 1953",
@@ -505,8 +313,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 32,
-    "stt": 32,
+    "id": 20,
+    "stt": 20,
     "name": "NGUYỄN THỊ LÂU",
     "title": "Truy tặng",
     "birth_death": "1923 - 1988",
@@ -521,24 +329,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 33,
-    "stt": 33,
-    "name": "NGUYỄN THỊ MƯỜI",
-    "title": "Truy tặng",
-    "birth_death": "1939 - 2012",
-    "hometown": "Xã Trường Xuân, huyện Ô Môn, tỉnh Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 705/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Văn Long (chồng), hy sinh ngày 07/10/1967 + Liệt sĩ Nguyễn Văn Đoàn (con), hy sinh ngày 30/10/1972",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_035.jpg",
-    "page_pdf": 35,
-    "page_book": 301,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 34,
-    "stt": 34,
+    "id": 21,
+    "stt": 21,
     "name": "HUỲNH THỊ NAY",
     "title": "Truy tặng",
     "birth_death": "1909 - 2001",
@@ -553,8 +345,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 35,
-    "stt": 35,
+    "id": 22,
+    "stt": 22,
     "name": "LÊ THỊ NĂM",
     "title": "Phong tặng",
     "birth_death": "1923 - 2018",
@@ -569,24 +361,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 36,
-    "stt": 36,
-    "name": "TRẦN THỊ NHÌ",
-    "title": "Truy tặng",
-    "birth_death": "1910 - 1952",
-    "hometown": "Xã Phú Hòa Đông, huyện Củ Chi, Thành phố Hồ Chí Minh",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Lâm Văn O (con), hy sinh năm 1966 + Liệt sĩ Lâm Thị Á ( con), hy sinh ngày 12/10/1974",
-    "worship_address": "",
-    "photo": "assets/images/mothers/page_038.jpg",
-    "page_pdf": 38,
-    "page_book": 304,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 37,
-    "stt": 37,
+    "id": 23,
+    "stt": 23,
     "name": "BÙI THỊ NHỊ",
     "title": "Truy tặng",
     "birth_death": "1902 - 1981",
@@ -601,8 +377,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 38,
-    "stt": 38,
+    "id": 24,
+    "stt": 24,
     "name": "TÓNG THỊ PHẬN",
     "title": "Truy tặng",
     "birth_death": "1930 - 2010",
@@ -617,8 +393,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 39,
-    "stt": 39,
+    "id": 25,
+    "stt": 25,
     "name": "NGUYỄN THỊ SÁU",
     "title": "Truy tặng",
     "birth_death": "1916 - 2004",
@@ -633,8 +409,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 40,
-    "stt": 40,
+    "id": 26,
+    "stt": 26,
     "name": "NGUYỄN THỊ TẢO",
     "title": "Truy tặng",
     "birth_death": "1911 - 1984",
@@ -649,8 +425,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 41,
-    "stt": 41,
+    "id": 27,
+    "stt": 27,
     "name": "VÕ THỊ THÊU",
     "title": "Phong tặng",
     "birth_death": "1924 - 2016",
@@ -665,24 +441,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 42,
-    "stt": 42,
-    "name": "NGUYỄN THỊ THỨ",
-    "title": "Truy tặng",
-    "birth_death": "1914 - 1996",
-    "hometown": "Xã Trường Thành, huyện Thới Lai, thành phố Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Đặng Văn Mừng (con), hy sinh ngày 29/9/1970 + Liệt sĩ Đặng Văn Xem (con), hy sinh ngày 28/7/1973",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_044.jpg",
-    "page_pdf": 44,
-    "page_book": 310,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 43,
-    "stt": 43,
+    "id": 28,
+    "stt": 28,
     "name": "LÊ THỊ TIẾNG",
     "title": "Truy tặng",
     "birth_death": "1934 - 2010",
@@ -697,72 +457,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 44,
-    "stt": 44,
-    "name": "NGUYỄN THỊ TÔI",
-    "title": "Truy tặng",
-    "birth_death": "1926 - 1978",
-    "hometown": "Xã Thuận Điền, huyện Giồng Trôm, tỉnh Bến Tre",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Văn Sào (chồng), hy sinh ngày 16/3/1954 + Liệt sĩ Nguyễn Thị Sa (con), hy sinh ngày 05/3/1967",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_046.jpg",
-    "page_pdf": 46,
-    "page_book": 312,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 45,
-    "stt": 45,
-    "name": "LÊ THỊ TỐT",
-    "title": "Phong tặng",
-    "birth_death": "1924",
-    "hometown": "Xã Trường Xuân, huyện Thới Lai, thành phố Cần Thơ",
-    "decision": "Mẹ được phong tặng theo Quyết định số 628/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệ t sĩ: + Liệt sĩ Đặng Văn Sanh (chồng), hy sinh năm 1975 + Liệt sĩ Đặng Ngọc Em (con), hy sinh ngày 16/7/1969",
-    "worship_address": "",
-    "photo": "assets/images/mothers/page_047.jpg",
-    "page_pdf": 47,
-    "page_book": 313,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 46,
-    "stt": 46,
-    "name": "TRẦN THỊ TRẦM",
-    "title": "Truy tặng",
-    "birth_death": "1917 - 1956",
-    "hometown": "Thị trấn Ô Môn, huyện Ô Môn, tỉnh Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Nguyễn Văn Thình (chồng), hy sinh ngày 28/3/1962 + Liệt sĩ Nguyễn Trọng Vinh (con), hy sinh ngày 27/7/1966",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_048.jpg",
-    "page_pdf": 48,
-    "page_book": 314,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 47,
-    "stt": 47,
-    "name": "NGUYỄN THỊ TRƯỢNG",
-    "title": "Truy tặng",
-    "birth_death": "1893 - 1982",
-    "hometown": "Xã Thới Thạnh, huyện Ô Môn, tỉnh Hậu Giang",
-    "decision": "Mẹ được truy tặng theo Quyết định số 2887/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Lê Văn Tưởn g (con), hy sinh ngày 25/10/1967 + Liệt sĩ Lê Văn Tây (con), hy sinh ngày 15/10/1969",
-    "worship_address": "Phường Châu Văn Liêm, quận Ô Môn, thành phố Cần Thơ",
-    "photo": "assets/images/mothers/page_049.jpg",
-    "page_pdf": 49,
-    "page_book": 315,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 48,
-    "stt": 48,
+    "id": 29,
+    "stt": 29,
     "name": "DƯƠNG THỊ TỨ",
     "title": "Truy tặng",
     "birth_death": "1918 - 1995",
@@ -777,24 +473,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 49,
-    "stt": 49,
-    "name": "NGUYỄN THỊ TƯƠI",
-    "title": "Truy tặng",
-    "birth_death": "1913 - 1956",
-    "hometown": "Xã Trường Thành, huyện Thới Lai, thành phố Cần Thơ",
-    "decision": "Mẹ được truy tặng theo Quyết định số 629/QĐ-CTN",
-    "relatives": "Mẹ có 2 người thân là liệt sĩ: + Liệt sĩ Phạm Thị Gói (con), hy sinh năm 1968 + Liệt sĩ Phạm Rô Y (con), hy sinh ngày 07/7/1968",
-    "worship_address": "",
-    "photo": "assets/images/mothers/page_051.jpg",
-    "page_pdf": 51,
-    "page_book": 317,
-    "district": "Phường Phước Thới",
-    "is_phuoc_thoi": true
-  },
-  {
-    "id": 50,
-    "stt": 50,
+    "id": 30,
+    "stt": 30,
     "name": "LÊ THỊ XINH",
     "title": "Truy tặng",
     "birth_death": "1921 - 1992",
@@ -809,8 +489,8 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 51,
-    "stt": 51,
+    "id": 31,
+    "stt": 31,
     "name": "TRẦN THỊ XIẾU",
     "title": "Phong tặng",
     "birth_death": "1920 - 2015",
@@ -825,7 +505,279 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": true
   },
   {
-    "id": 52,
+    "name": "TRẦN THỊ GIÀU",
+    "title": "Truy tặng",
+    "birth_death": "1914 - 1984",
+    "hometown": "Khu vực Bình An, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng danh hiệu Bà mẹ Việt Nam Anh hùng",
+    "relatives": "Mẹ có 1 người con đẻ độc nhất là liệt sĩ: + Liệt sĩ Võ Văn Phích (con đẻ)",
+    "worship_address": "Khu vực Bình An, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 32,
+    "stt": 32
+  },
+  {
+    "name": "NGUYỄN THỊ LUYẾN",
+    "title": "Truy tặng",
+    "birth_death": "1910 - 1990",
+    "hometown": "Khu vực Bình An, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng danh hiệu Bà mẹ Việt Nam Anh hùng",
+    "relatives": "Mẹ có 3 người con đẻ là liệt sĩ: + Liệt sĩ Hồ Văn Lâm (con đẻ) + Liệt sĩ Hồ Văn Sử (con đẻ) + Liệt sĩ Hồ Văn Lực (con đẻ)",
+    "worship_address": "Khu vực Bình An, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 33,
+    "stt": 33
+  },
+  {
+    "name": "NGUYỄN THỊ BẢNG",
+    "title": "Truy tặng",
+    "birth_death": "1898 - 1965",
+    "hometown": "Khu vực Bình Lợi, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 24/4/1995",
+    "relatives": "Mẹ có 3 người con đẻ là liệt sĩ anh dũng hy sinh vì sự nghiệp giải phóng dân tộc",
+    "worship_address": "Khu vực Bình Lợi, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 34,
+    "stt": 34
+  },
+  {
+    "name": "DƯƠNG THỊ DINH",
+    "title": "Truy tặng",
+    "birth_death": "1897 - 1966",
+    "hometown": "Khu vực Bình Lợi, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 24/4/1995",
+    "relatives": "Mẹ có 4 người con đẻ là liệt sĩ anh dũng hy sinh vì sự nghiệp giải phóng dân tộc",
+    "worship_address": "Khu vực Bình Lợi, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 35,
+    "stt": 35
+  },
+  {
+    "name": "NGUYỄN THỊ HƯNG",
+    "title": "Phong tặng",
+    "birth_death": "Sinh năm 1914",
+    "hometown": "Khu vực Bình Lợi, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được phong tặng theo Quyết định ngày 24/4/1994",
+    "relatives": "Mẹ có 1 người con đẻ độc nhất là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Bình Lợi, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 36,
+    "stt": 36
+  },
+  {
+    "name": "VÕ THỊ KIM",
+    "title": "Phong tặng",
+    "birth_death": "1906 - 1997",
+    "hometown": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được phong tặng theo Quyết định ngày 17/12/1994",
+    "relatives": "Mẹ có 3 người con đẻ là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 37,
+    "stt": 37
+  },
+  {
+    "name": "TRẦN THỊ LIẾU",
+    "title": "Phong tặng",
+    "birth_death": "1915 - 1996",
+    "hometown": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được phong tặng theo Quyết định ngày 24/4/1995",
+    "relatives": "Mẹ có 3 người con đẻ là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 38,
+    "stt": 38
+  },
+  {
+    "name": "NGUYỄN THỊ MÓT",
+    "title": "Truy tặng",
+    "birth_death": "1899 - 1990",
+    "hometown": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 17/12/1994",
+    "relatives": "Mẹ có 3 người con đẻ là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 39,
+    "stt": 39
+  },
+  {
+    "name": "DƯƠNG THỊ BẠC",
+    "title": "Truy tặng",
+    "birth_death": "1908 - 2000",
+    "hometown": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 03/8/2001",
+    "relatives": "Mẹ có 3 người thân là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 40,
+    "stt": 40
+  },
+  {
+    "name": "NGUYỄN THỊ CƯU",
+    "title": "Truy tặng",
+    "birth_death": "1915 - 1980",
+    "hometown": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 17/12/1994",
+    "relatives": "Mẹ có 3 người con đẻ là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 41,
+    "stt": 41
+  },
+  {
+    "name": "LÊ THỊ ÚT",
+    "title": "Truy tặng",
+    "birth_death": "1923 - 1998",
+    "hometown": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 19/09/2008",
+    "relatives": "Mẹ có chồng và 2 người con đẻ là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Tân Quy, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 42,
+    "stt": 42
+  },
+  {
+    "name": "LÝ THỊ LÚA",
+    "title": "Truy tặng",
+    "birth_death": "1918 - 1948",
+    "hometown": "Khu vực Trường Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 19/09/2008",
+    "relatives": "Mẹ có 3 người con đẻ là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Trường Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 43,
+    "stt": 43
+  },
+  {
+    "name": "PHẠM THỊ LIÊN",
+    "title": "Truy tặng",
+    "birth_death": "1911 - 1988",
+    "hometown": "Khu vực Bình Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 19/09/2008",
+    "relatives": "Mẹ có 1 người con đẻ độc nhất là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Bình Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 44,
+    "stt": 44
+  },
+  {
+    "name": "LÊ THỊ KÍNH",
+    "title": "Truy tặng",
+    "birth_death": "1890 - 1982",
+    "hometown": "Khu vực Bình Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 19/09/2008",
+    "relatives": "Mẹ có 1 người con đẻ độc nhất là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Bình Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 45,
+    "stt": 45
+  },
+  {
+    "name": "VÕ THỊ TỨC",
+    "title": "Truy tặng",
+    "birth_death": "1909 - 1983",
+    "hometown": "Khu vực Bình Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 19/09/2008",
+    "relatives": "Mẹ có 3 người con đẻ là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Bình Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 46,
+    "stt": 46
+  },
+  {
+    "name": "VÕ THỊ TỴ",
+    "title": "Truy tặng",
+    "birth_death": "Sinh năm 1904",
+    "hometown": "Khu vực Bình Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "decision": "Mẹ được truy tặng theo Quyết định ngày 19/09/2009",
+    "relatives": "Mẹ có 1 người con đẻ độc nhất là liệt sĩ anh dũng hy sinh",
+    "worship_address": "Khu vực Bình Hòa, phường Phước Thới, quận Ô Môn, thành phố Cần Thơ",
+    "photo": "assets/images/default-mother.svg",
+    "page_pdf": null,
+    "page_book": null,
+    "district": "Phường Phước Thới",
+    "is_phuoc_thoi": true,
+    "source": "ds_2022",
+    "id": 47,
+    "stt": 47
+  },
+  {
+    "id": 48,
     "stt": 52,
     "name": "TRẦN THỊ BA",
     "title": "Truy tặng",
@@ -841,7 +793,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 53,
+    "id": 49,
     "stt": 53,
     "name": "PHẠM THỊ CHỈ",
     "title": "Truy tặng",
@@ -857,7 +809,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 54,
+    "id": 50,
     "stt": 54,
     "name": "NGUYỄN THỊ CHÍN",
     "title": "Phong tặng",
@@ -873,7 +825,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 55,
+    "id": 51,
     "stt": 55,
     "name": "NGUYỄN THỊ HAI",
     "title": "Truy tặng",
@@ -889,7 +841,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 56,
+    "id": 52,
     "stt": 56,
     "name": "TRẦN THỊ HOA",
     "title": "Truy tặng",
@@ -905,7 +857,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 57,
+    "id": 53,
     "stt": 57,
     "name": "VÕ THỊ LẸ",
     "title": "Phong tặng",
@@ -921,7 +873,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 58,
+    "id": 54,
     "stt": 58,
     "name": "LÊ THỊ MAU",
     "title": "Truy tặng",
@@ -937,7 +889,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 59,
+    "id": 55,
     "stt": 59,
     "name": "NGUYỄN THỊ MUỐI",
     "title": "Truy tặng",
@@ -953,7 +905,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 60,
+    "id": 56,
     "stt": 60,
     "name": "ĐINH THỊ NGHĨA",
     "title": "Truy tặng",
@@ -969,7 +921,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 61,
+    "id": 57,
     "stt": 61,
     "name": "HỒ THỊ NỮ",
     "title": "Truy tặng",
@@ -985,7 +937,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 62,
+    "id": 58,
     "stt": 62,
     "name": "TRẦN THỊ TÁM",
     "title": "Truy tặng",
@@ -1001,7 +953,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 63,
+    "id": 59,
     "stt": 63,
     "name": "LÊ THỊ TY",
     "title": "Phong tặng",
@@ -1017,7 +969,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 64,
+    "id": 60,
     "stt": 64,
     "name": "NGUYỄN THỊ AN",
     "title": "Truy tặng",
@@ -1033,7 +985,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 65,
+    "id": 61,
     "stt": 65,
     "name": "CHUNG KIM ANH",
     "title": "Truy tặng",
@@ -1049,7 +1001,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 66,
+    "id": 62,
     "stt": 66,
     "name": "TRÌNH THỊ ANH",
     "title": "Truy tặng",
@@ -1065,7 +1017,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 67,
+    "id": 63,
     "stt": 67,
     "name": "PHẠM THỊ BA",
     "title": "Truy tặng",
@@ -1081,7 +1033,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 68,
+    "id": 64,
     "stt": 68,
     "name": "PHAN THỊ BA",
     "title": "Truy tặng",
@@ -1097,7 +1049,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 69,
+    "id": 65,
     "stt": 69,
     "name": "ĐỖ THỊ BA",
     "title": "Phong tặng",
@@ -1113,7 +1065,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 70,
+    "id": 66,
     "stt": 70,
     "name": "NGUYỄN THỊ BA",
     "title": "Truy tặng",
@@ -1129,7 +1081,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 71,
+    "id": 67,
     "stt": 71,
     "name": "TRẦN THỊ BA",
     "title": "Truy tặng",
@@ -1145,7 +1097,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 72,
+    "id": 68,
     "stt": 72,
     "name": "TRƯƠNG THỊ BA",
     "title": "Truy tặng",
@@ -1161,7 +1113,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 73,
+    "id": 69,
     "stt": 73,
     "name": "TRƯƠNG THỊ BA",
     "title": "Truy tặng",
@@ -1177,7 +1129,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 74,
+    "id": 70,
     "stt": 74,
     "name": "NGUYỄN THỊ BÀNG",
     "title": "Phong tặng",
@@ -1193,7 +1145,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 75,
+    "id": 71,
     "stt": 75,
     "name": "BÙI THỊ BẢY",
     "title": "Truy tặng",
@@ -1209,7 +1161,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 76,
+    "id": 72,
     "stt": 76,
     "name": "HUỲNH THỊ BẢY",
     "title": "Truy tặng",
@@ -1225,7 +1177,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 77,
+    "id": 73,
     "stt": 77,
     "name": "LÊ THỊ BẢY",
     "title": "Truy tặng",
@@ -1241,7 +1193,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 78,
+    "id": 74,
     "stt": 78,
     "name": "NGUYỄN THỊ BẢY",
     "title": "Truy tặng",
@@ -1257,7 +1209,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 79,
+    "id": 75,
     "stt": 79,
     "name": "NGUYỄN THỊ BẢY",
     "title": "Truy tặng",
@@ -1273,7 +1225,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 80,
+    "id": 76,
     "stt": 80,
     "name": "NGUYỄN THỊ BẢY",
     "title": "Truy tặng",
@@ -1289,7 +1241,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 81,
+    "id": 77,
     "stt": 81,
     "name": "TRẦN THỊ BẢY",
     "title": "Truy tặng",
@@ -1305,7 +1257,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 82,
+    "id": 78,
     "stt": 82,
     "name": "VÕ THỊ BỘN",
     "title": "Truy tặng",
@@ -1321,7 +1273,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 83,
+    "id": 79,
     "stt": 83,
     "name": "NGUYỄN THỊ BÔNG",
     "title": "Truy tặng",
@@ -1337,7 +1289,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 84,
+    "id": 80,
     "stt": 84,
     "name": "LÊ THỊ BƯƠNG",
     "title": "Truy tặng",
@@ -1353,7 +1305,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 85,
+    "id": 81,
     "stt": 85,
     "name": "LÊ THỊ CẢNH",
     "title": "Truy tặng",
@@ -1369,7 +1321,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 86,
+    "id": 82,
     "stt": 86,
     "name": "TRƯƠNG THỊ CẤM",
     "title": "Truy tặng",
@@ -1385,7 +1337,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 87,
+    "id": 83,
     "stt": 87,
     "name": "LA THỊ CHÍNH",
     "title": "Truy tặng",
@@ -1401,7 +1353,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 88,
+    "id": 84,
     "stt": 88,
     "name": "NGUYỄN THỊ ÚT CHÓT",
     "title": "Phong tặng",
@@ -1417,7 +1369,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 89,
+    "id": 85,
     "stt": 89,
     "name": "NGUYỄN THỊ CHƠI",
     "title": "Truy tặng",
@@ -1433,7 +1385,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 90,
+    "id": 86,
     "stt": 90,
     "name": "TRẦN THỊ CÒ",
     "title": "Truy tặng",
@@ -1449,7 +1401,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 91,
+    "id": 87,
     "stt": 91,
     "name": "NGUYỄN THỊ CÔNG",
     "title": "Truy tặng",
@@ -1465,7 +1417,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 92,
+    "id": 88,
     "stt": 92,
     "name": "NGUYỄN THỊ CỦA",
     "title": "Truy tặng",
@@ -1481,7 +1433,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 93,
+    "id": 89,
     "stt": 93,
     "name": "HUỲNH THỊ CƯƠU",
     "title": "Truy tặng",
@@ -1497,7 +1449,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 94,
+    "id": 90,
     "stt": 94,
     "name": "DIỆP THỊ DẤN",
     "title": "Truy tặng",
@@ -1513,7 +1465,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 95,
+    "id": 91,
     "stt": 95,
     "name": "NGÔ THỊ DẬU",
     "title": "Truy tặng",
@@ -1529,7 +1481,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 96,
+    "id": 92,
     "stt": 96,
     "name": "NGUYỄN THỊ DẺ",
     "title": "Truy tặng",
@@ -1545,7 +1497,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 97,
+    "id": 93,
     "stt": 97,
     "name": "NGUYỄN THỊ DO",
     "title": "Truy tặng",
@@ -1561,7 +1513,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 98,
+    "id": 94,
     "stt": 98,
     "name": "NGÔ THỊ DUNG",
     "title": "Truy tặng",
@@ -1577,7 +1529,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 99,
+    "id": 95,
     "stt": 99,
     "name": "TRẦN THỊ DUNG",
     "title": "Truy tặng",
@@ -1593,7 +1545,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 100,
+    "id": 96,
     "stt": 100,
     "name": "NGUYỄN THỊ ĐẠM",
     "title": "Truy tặng",
@@ -1609,7 +1561,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 101,
+    "id": 97,
     "stt": 101,
     "name": "PHẠM THỊ ĐẶNG",
     "title": "Truy tặng",
@@ -1625,7 +1577,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 102,
+    "id": 98,
     "stt": 102,
     "name": "PHAN THỊ ĐẶNG",
     "title": "Truy tặng",
@@ -1641,7 +1593,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 103,
+    "id": 99,
     "stt": 103,
     "name": "NGUYỄN THỊ ĐẶNG",
     "title": "Truy tặng",
@@ -1657,7 +1609,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 104,
+    "id": 100,
     "stt": 104,
     "name": "HUỲNH THỊ ĐÂY",
     "title": "Truy tặng",
@@ -1673,7 +1625,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 105,
+    "id": 101,
     "stt": 105,
     "name": "HUỲNH THỊ GIÀU",
     "title": "Truy tặng",
@@ -1689,7 +1641,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 106,
+    "id": 102,
     "stt": 106,
     "name": "TỐNG THỊ GIÀU",
     "title": "Truy tặng",
@@ -1705,7 +1657,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 107,
+    "id": 103,
     "stt": 107,
     "name": "NGUYỄN THỊ GIỜ",
     "title": "Truy tặng",
@@ -1721,7 +1673,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 108,
+    "id": 104,
     "stt": 108,
     "name": "TRƯƠNG THỊ HANH",
     "title": "Truy tặng",
@@ -1737,7 +1689,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 109,
+    "id": 105,
     "stt": 109,
     "name": "NGUYỄN THỊ MỸ HẠNH",
     "title": "Truy tặng",
@@ -1753,7 +1705,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 110,
+    "id": 106,
     "stt": 110,
     "name": "DƯƠNG THỊ HAI",
     "title": "Truy tặng",
@@ -1769,7 +1721,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 111,
+    "id": 107,
     "stt": 111,
     "name": "DƯƠNG THỊ HAI",
     "title": "Truy tặng",
@@ -1785,7 +1737,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 112,
+    "id": 108,
     "stt": 112,
     "name": "HỒ THỊ HAI",
     "title": "Truy tặng",
@@ -1801,7 +1753,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 113,
+    "id": 109,
     "stt": 113,
     "name": "NGUYỄN THỊ HAI",
     "title": "Truy tặng",
@@ -1817,7 +1769,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 114,
+    "id": 110,
     "stt": 114,
     "name": "PHẠM THỊ HAI",
     "title": "Truy tặng",
@@ -1833,7 +1785,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 115,
+    "id": 111,
     "stt": 115,
     "name": "TRẦN THỊ HAI",
     "title": "Truy tặng",
@@ -1849,7 +1801,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 116,
+    "id": 112,
     "stt": 116,
     "name": "TRẦN THỊ HAI",
     "title": "Truy tặng",
@@ -1865,7 +1817,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 117,
+    "id": 113,
     "stt": 117,
     "name": "HỒ THỊ HẰNG",
     "title": "Truy tặng",
@@ -1881,7 +1833,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 118,
+    "id": 114,
     "stt": 118,
     "name": "PHAN THỊ HIỂN",
     "title": "Truy tặng",
@@ -1897,7 +1849,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 119,
+    "id": 115,
     "stt": 119,
     "name": "HỒ THỊ HIỆP",
     "title": "Truy tặng",
@@ -1913,7 +1865,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 120,
+    "id": 116,
     "stt": 120,
     "name": "LÊ THỊ HOÀNG",
     "title": "Phong tặng",
@@ -1929,7 +1881,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 121,
+    "id": 117,
     "stt": 121,
     "name": "ĐẶNG THỊ HỢI",
     "title": "Truy tặng",
@@ -1945,7 +1897,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 122,
+    "id": 118,
     "stt": 122,
     "name": "DƯƠNG THỊ HY",
     "title": "Truy tặng",
@@ -1961,7 +1913,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 123,
+    "id": 119,
     "stt": 123,
     "name": "PHẠM THỊ KIÊN",
     "title": "Truy tặng",
@@ -1977,7 +1929,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 124,
+    "id": 120,
     "stt": 124,
     "name": "TỐNG THỊ KIÊN",
     "title": "Truy tặng",
@@ -1993,7 +1945,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 125,
+    "id": 121,
     "stt": 125,
     "name": "PHẠM THỊ KIÊM (PHẠM THỊ HAI)(PHẠM THỊ HAI)",
     "title": "Truy tặng",
@@ -2009,7 +1961,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 126,
+    "id": 122,
     "stt": 126,
     "name": "TRƯƠNG THỊ KIÊM",
     "title": "Truy tặng",
@@ -2025,7 +1977,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 127,
+    "id": 123,
     "stt": 127,
     "name": "TRƯƠNG THỊ KHƯƠNG (TRƯƠNG THỊ NAM)(TRƯƠNG THỊ NAM)",
     "title": "Truy tặng",
@@ -2041,7 +1993,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 128,
+    "id": 124,
     "stt": 128,
     "name": "BÙI THỊ KỸ",
     "title": "Truy tặng",
@@ -2057,7 +2009,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 129,
+    "id": 125,
     "stt": 129,
     "name": "NGUYỄN THỊ LAI",
     "title": "Truy tặng",
@@ -2073,7 +2025,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 130,
+    "id": 126,
     "stt": 130,
     "name": "TRẦN THỊ LAN",
     "title": "Truy tặng",
@@ -2089,7 +2041,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 131,
+    "id": 127,
     "stt": 131,
     "name": "PHAN THỊ LÁNG",
     "title": "Truy tặng",
@@ -2105,7 +2057,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 132,
+    "id": 128,
     "stt": 132,
     "name": "TRƯƠNG THỊ LÁNG",
     "title": "Truy tặng",
@@ -2121,7 +2073,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 133,
+    "id": 129,
     "stt": 133,
     "name": "NGUYỄN THỊ LÀNH",
     "title": "Truy tặng",
@@ -2137,7 +2089,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 134,
+    "id": 130,
     "stt": 134,
     "name": "NGUYỄN THỊ LÃNH",
     "title": "Phong tặng",
@@ -2153,7 +2105,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 135,
+    "id": 131,
     "stt": 135,
     "name": "PHAN THỊ LẮM",
     "title": "Truy tặng",
@@ -2169,7 +2121,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 136,
+    "id": 132,
     "stt": 136,
     "name": "BÙI THỊ LIỂU",
     "title": "Truy tặng",
@@ -2185,7 +2137,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 137,
+    "id": 133,
     "stt": 137,
     "name": "PHÙNG THỊ LÌNH",
     "title": "Truy tặng",
@@ -2201,7 +2153,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 138,
+    "id": 134,
     "stt": 138,
     "name": "NGUYỄN THỊ LỜI",
     "title": "Truy tặng",
@@ -2217,7 +2169,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 139,
+    "id": 135,
     "stt": 139,
     "name": "TRẦN THỊ LỢI",
     "title": "Truy tặng",
@@ -2233,7 +2185,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 140,
+    "id": 136,
     "stt": 140,
     "name": "HUỲNH THỊ LỤA",
     "title": "Truy tặng",
@@ -2249,7 +2201,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 141,
+    "id": 137,
     "stt": 141,
     "name": "NGUYỄN THỊ LƯ",
     "title": "Phong tặng",
@@ -2265,7 +2217,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 142,
+    "id": 138,
     "stt": 142,
     "name": "NGUYỄN THỊ LỪA",
     "title": "Truy tặng",
@@ -2281,7 +2233,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 143,
+    "id": 139,
     "stt": 143,
     "name": "HUỲNH THỊ MƯỜI",
     "title": "Truy tặng",
@@ -2297,7 +2249,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 144,
+    "id": 140,
     "stt": 144,
     "name": "PHAN THỊ MƯỜI",
     "title": "Truy tặng",
@@ -2313,7 +2265,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 145,
+    "id": 141,
     "stt": 145,
     "name": "NGUYỄN THỊ MƯỜI",
     "title": "Truy tặng",
@@ -2329,7 +2281,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 146,
+    "id": 142,
     "stt": 146,
     "name": "TRẦN THỊ MƯỜI",
     "title": "Truy tặng",
@@ -2345,7 +2297,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 147,
+    "id": 143,
     "stt": 147,
     "name": "HUỲNH THỊ NĂM",
     "title": "Truy tặng",
@@ -2361,7 +2313,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 148,
+    "id": 144,
     "stt": 148,
     "name": "NGUYỄN THỊ NĂM",
     "title": "Phong tặng",
@@ -2377,7 +2329,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 149,
+    "id": 145,
     "stt": 149,
     "name": "NGUYỄN THỊ NĂM",
     "title": "Truy tặng",
@@ -2393,7 +2345,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 150,
+    "id": 146,
     "stt": 150,
     "name": "NGUYỄN THỊ NĂM",
     "title": "Truy tặng",
@@ -2409,7 +2361,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 151,
+    "id": 147,
     "stt": 151,
     "name": "HUỲNH THỊ NÊN",
     "title": "Truy tặng",
@@ -2425,7 +2377,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 152,
+    "id": 148,
     "stt": 152,
     "name": "TRẦN THỊ NGÃI",
     "title": "Truy tặng",
@@ -2441,7 +2393,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 153,
+    "id": 149,
     "stt": 153,
     "name": "BÙI THỊ NGÂN",
     "title": "Truy tặng",
@@ -2457,7 +2409,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 154,
+    "id": 150,
     "stt": 154,
     "name": "NGÔ THỊ NGHIÊM",
     "title": "Truy tặng",
@@ -2473,7 +2425,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 155,
+    "id": 151,
     "stt": 155,
     "name": "PHAN THỊ NGỌ",
     "title": "Truy tặng",
@@ -2489,7 +2441,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 156,
+    "id": 152,
     "stt": 156,
     "name": "NGUYỄN THỊ NGỌC",
     "title": "Truy tặng",
@@ -2505,7 +2457,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 157,
+    "id": 153,
     "stt": 157,
     "name": "NGUYỄN THỊ NGUYỆT",
     "title": "Truy tặng",
@@ -2521,7 +2473,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 158,
+    "id": 154,
     "stt": 158,
     "name": "THIỀU THỊ NHÃN",
     "title": "Truy tặng",
@@ -2537,7 +2489,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 159,
+    "id": 155,
     "stt": 159,
     "name": "NGUYỄN THỊ NHẠN",
     "title": "Truy tặng",
@@ -2553,7 +2505,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 160,
+    "id": 156,
     "stt": 160,
     "name": "VĂN THỊ NHUNG",
     "title": "Truy tặng",
@@ -2569,7 +2521,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 161,
+    "id": 157,
     "stt": 161,
     "name": "LÊ THỊ NỞ",
     "title": "Truy tặng",
@@ -2585,7 +2537,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 162,
+    "id": 158,
     "stt": 162,
     "name": "LÊ THỊ NỮ",
     "title": "Truy tặng",
@@ -2601,7 +2553,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 163,
+    "id": 159,
     "stt": 163,
     "name": "TRẦN THỊ RUỘNG",
     "title": "Truy tặng",
@@ -2617,7 +2569,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 164,
+    "id": 160,
     "stt": 164,
     "name": "NGUYỄN THỊ SANG",
     "title": "Truy tặng",
@@ -2633,7 +2585,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 165,
+    "id": 161,
     "stt": 165,
     "name": "ĐÀO THỊ SÁU",
     "title": "Phong tặng",
@@ -2649,7 +2601,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 166,
+    "id": 162,
     "stt": 166,
     "name": "LÊ THỊ SÁU",
     "title": "Truy tặng",
@@ -2665,7 +2617,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 167,
+    "id": 163,
     "stt": 167,
     "name": "NGUYỄN THỊ SÁU",
     "title": "Truy tặng",
@@ -2681,7 +2633,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 168,
+    "id": 164,
     "stt": 168,
     "name": "TRẦN THỊ SÁU",
     "title": "Truy tặng",
@@ -2697,7 +2649,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 169,
+    "id": 165,
     "stt": 169,
     "name": "NGUYỄN THỊ SÁU",
     "title": "Truy tặng",
@@ -2713,7 +2665,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 170,
+    "id": 166,
     "stt": 170,
     "name": "BÙI THỊ SÂM",
     "title": "Truy tặng",
@@ -2729,7 +2681,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 171,
+    "id": 167,
     "stt": 171,
     "name": "TRẦN THỊ SÂM",
     "title": "Truy tặng",
@@ -2745,7 +2697,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 172,
+    "id": 168,
     "stt": 172,
     "name": "PHẠM THỊ SỬU",
     "title": "Truy tặng",
@@ -2761,7 +2713,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 173,
+    "id": 169,
     "stt": 173,
     "name": "LÊ THỊ TÁM",
     "title": "Truy tặng",
@@ -2777,7 +2729,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 174,
+    "id": 170,
     "stt": 174,
     "name": "NGUYỄN THỊ TÁM",
     "title": "Truy tặng",
@@ -2793,7 +2745,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 175,
+    "id": 171,
     "stt": 175,
     "name": "NGUYỄN THỊ TÁM",
     "title": "Truy tặng",
@@ -2809,7 +2761,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 176,
+    "id": 172,
     "stt": 176,
     "name": "NGUYỄN THỊ TÁNH",
     "title": "Truy tặng",
@@ -2825,7 +2777,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 177,
+    "id": 173,
     "stt": 177,
     "name": "PHẠM THỊ TÂN",
     "title": "Truy tặng",
@@ -2841,7 +2793,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 178,
+    "id": 174,
     "stt": 178,
     "name": "NGUYỄN THỊ THÀ",
     "title": "Phong tặng",
@@ -2857,7 +2809,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 179,
+    "id": 175,
     "stt": 179,
     "name": "NGUYỄN THỊ THẮM",
     "title": "Truy tặng",
@@ -2873,7 +2825,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 180,
+    "id": 176,
     "stt": 180,
     "name": "MAI THỊ THIỆT",
     "title": "Truy tặng",
@@ -2889,7 +2841,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 181,
+    "id": 177,
     "stt": 181,
     "name": "NGUYỄN THỊ THUẬN",
     "title": "Truy tặng",
@@ -2905,7 +2857,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 182,
+    "id": 178,
     "stt": 182,
     "name": "NGÔ THỊ TÍM",
     "title": "Truy tặng",
@@ -2921,7 +2873,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 183,
+    "id": 179,
     "stt": 183,
     "name": "TRẦN THỊ TỊNH",
     "title": "Truy tặng",
@@ -2937,7 +2889,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 184,
+    "id": 180,
     "stt": 184,
     "name": "LÊ THỊ TỒNG",
     "title": "Truy tặng",
@@ -2953,7 +2905,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 185,
+    "id": 181,
     "stt": 185,
     "name": "LÊ THỊ TỔNG",
     "title": "Phong tặng",
@@ -2969,7 +2921,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 186,
+    "id": 182,
     "stt": 186,
     "name": "TRẦN THỊ TRẦM",
     "title": "Truy tặng",
@@ -2985,7 +2937,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 187,
+    "id": 183,
     "stt": 187,
     "name": "TRẦN THỊ TRỊ",
     "title": "Truy tặng",
@@ -3001,7 +2953,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 188,
+    "id": 184,
     "stt": 188,
     "name": "LÊ THỊ TRỌNG",
     "title": "Truy tặng",
@@ -3017,7 +2969,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 189,
+    "id": 185,
     "stt": 189,
     "name": "NGUYỄN THỊ TRỌNG",
     "title": "Truy tặng",
@@ -3033,7 +2985,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 190,
+    "id": 186,
     "stt": 190,
     "name": "CHIM THỊ TƯ",
     "title": "Truy tặng",
@@ -3049,7 +3001,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 191,
+    "id": 187,
     "stt": 191,
     "name": "NGUYỄN THỊ TƯ",
     "title": "Truy tặng",
@@ -3065,7 +3017,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 192,
+    "id": 188,
     "stt": 192,
     "name": "PHẠM THỊ TƯ",
     "title": "Truy tặng",
@@ -3081,7 +3033,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 193,
+    "id": 189,
     "stt": 193,
     "name": "NGUYỄN THỊ VĂN",
     "title": "Truy tặng",
@@ -3097,7 +3049,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 194,
+    "id": 190,
     "stt": 194,
     "name": "TRẦN THỊ XEM",
     "title": "Truy tặng",
@@ -3113,7 +3065,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 195,
+    "id": 191,
     "stt": 195,
     "name": "NGUYỄN THỊ XIÊM",
     "title": "Truy tặng",
@@ -3129,7 +3081,7 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   },
   {
-    "id": 196,
+    "id": 192,
     "stt": 196,
     "name": "HỒ THỊ YÊN",
     "title": "Truy tặng",
@@ -3145,7 +3097,3 @@ const MOTHERS_DATA = [
     "is_phuoc_thoi": false
   }
 ];
-
-// Phân loại tiện ích
-const PHUOC_THOI_MOTHERS = MOTHERS_DATA.filter(m => m.is_phuoc_thoi);
-const ALL_MOTHERS = MOTHERS_DATA;

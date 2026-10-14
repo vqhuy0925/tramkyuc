@@ -1,7 +1,9 @@
 # TRẠM KÝ ỨC - MẸ VIỆT NAM ANH HÙNG PHƯỜNG PHƯỚC THỚI
 
 > **Công trình số hóa lịch sử và đền ơn đáp nghĩa** do Đoàn TNCS Hồ Chí Minh Phường Phước Thới phối hợp thực hiện.  
-> Lưu giữ hình ảnh, công trạng và lòng biết ơn của thế hệ trẻ đối với **51 Bà mẹ Việt Nam Anh hùng (VNAH)** của quê hương Phước Thới, Thành phố Cần Thơ.
+> Lưu giữ hình ảnh, công trạng và lòng biết ơn của thế hệ trẻ đối với **47 Bà mẹ Việt Nam Anh hùng (VNAH)** của quê hương Phước Thới, Thành phố Cần Thơ.
+> 
+> ✉️ **Hòm thư tiếp nhận đóng góp tư liệu & hình ảnh:** [doanpphuocthoi@gmail.com](mailto:doanpphuocthoi@gmail.com)
 
 ---
 
@@ -12,18 +14,20 @@
    - Lư hương đồng cổ kính với làn khói hương uốn lượn bay nhẹ (vẽ qua Canvas thời gian thực).
    - Nút **"Thắp nén tâm hương"** tích hợp âm thanh chuông chùa ngân trầm thanh tịnh (Web Audio API) và hiệu ứng haptic rung nhẹ trên điện thoại.
    - Bộ đếm thời gian thực số lượt thắp nến của nhân dân cả nước.
-3. **Danh mục 51 Mẹ VNAH Phước Thới**:
+3. **Danh mục 47 Mẹ VNAH Phước Thới**:
    - Tìm kiếm nhanh tức thì theo tên Mẹ hoặc tên thân nhân là Liệt sĩ.
-   - Bộ lọc phân loại: Tất cả, Có ảnh chân dung, Được truy tặng, Được phong tặng.
-   - Thẻ hình ảnh chân dung và Bằng Tổ quốc ghi công trang trọng.
+   - Bộ lọc phân loại: Phường Phước Thới, Tất cả, Quận Thốt Nốt, Huyện Phong Điền.
+   - Thẻ hình ảnh chân dung trang trọng hoặc biểu tượng Hoa sen vàng đối với các hồ sơ đang tiếp tục sưu tầm ảnh.
+   - Hộp tiếp nhận tư liệu một chạm mở email gửi trực tiếp về Ban Chấp hành Đoàn phường.
 4. **Hồ sơ Ký ức chi tiết (Chuẩn Mobile 3-Zone Flexbox)**:
    - Header cố định, nội dung cuộn trơn tru, footer tối ưu vùng an toàn ngón tay cái (`safe-area-inset-bottom` trên iPhone).
    - Tích hợp nút *"Thắp hương dâng riêng Mẹ"*.
+   - Nút *"Gửi tư liệu về Mẹ qua Email"* tự động điền sẵn tiêu đề và nội dung theo tên từng Mẹ.
 5. **Sổ lưu bút tri ân trực tuyến**:
    - Cho phép đoàn viên, học sinh và nhân dân khắp mọi miền gửi lời tri ân sâu sắc.
    - Hỗ trợ đồng bộ đám mây qua **Google Cloud Firestore (Miễn phí 100%)** và tự động có chế độ dự phòng **LocalStorage** chạy ngay tức thì.
 6. **Trích dẫn nguồn tư liệu chính xác**:
-   - *Nguồn: Sách "Bà mẹ Việt Nam Anh hùng thành phố Cần Thơ Tập II (2013 - 2020)" - Ban Tuyên giáo Thành ủy Cần Thơ; nội dung còn đang được tiếp tục cập nhật.*
+   - *Nguồn: Sách "Bà mẹ Việt Nam Anh hùng thành phố Cần Thơ Tập II (2013 - 2020)" - Ban Tuyên giáo Thành ủy Cần Thơ và Danh sách tổng hợp phong tặng, truy tặng Mẹ VNAH của UBND Phường Phước Thới; nội dung còn đang được tiếp tục cập nhật.*
 
 ---
 

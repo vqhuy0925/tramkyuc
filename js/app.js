@@ -241,7 +241,7 @@ function initMothersGallery() {
 
       // 2. Tìm kiếm theo từ khóa (tên Mẹ, con liệt sĩ, quê quán, số trang...)
       if (searchKeyword) {
-        const fullSearchStr = `${m.name} ${m.relatives} ${m.hometown} ${m.worship_address} ${m.district} trang ${m.page_book} ${m.page_book}`.toLowerCase();
+        const fullSearchStr = `${m.name} ${m.relatives || ""} ${m.hometown || ""} ${m.worship_address || ""} ${m.district || ""} ${m.page_book ? `trang ${m.page_book} ${m.page_book}` : "hồ sơ 2022"}`.toLowerCase();
         return fullSearchStr.includes(searchKeyword);
       }
 
@@ -264,6 +264,9 @@ function initMothersGallery() {
       card.setAttribute("data-stt", mother.stt);
 
       const imgSrc = mother.photo || "assets/images/default-mother.svg";
+      const pageBadgeHtml = mother.page_book 
+        ? `<span class="card-page-badge" title="Trang trong sách gốc">Trang ${mother.page_book}</span>`
+        : `<span class="card-page-badge badge-supplement" title="Hồ sơ bổ sung UBND Phường">Hồ sơ 2022</span>`;
 
       card.innerHTML = `
         <div class="card-img-wrap">
@@ -276,7 +279,7 @@ function initMothersGallery() {
           />
           <span class="card-badge-top">${mother.title}</span>
           <span class="card-stt-badge">#${mother.stt}</span>
-          <span class="card-page-badge" title="Trang trong sách gốc">Trang ${mother.page_book}</span>
+          ${pageBadgeHtml}
         </div>
         <div class="card-body">
           <h3 class="mother-name">${mother.name}</h3>
@@ -366,7 +369,19 @@ function openMotherModal(mother) {
   }
 
   if (mCitation) {
-    mCitation.textContent = `Nguồn tư liệu: Sách "Bà mẹ Việt Nam Anh hùng thành phố Cần Thơ Tập II (2013-2020)", Trang ${mother.page_book} (PDF trang ${mother.page_pdf}) - Ban Tuyên giáo Thành ủy Cần Thơ.`;
+    if (mother.page_book) {
+      mCitation.textContent = `Nguồn tư liệu: Sách "Bà mẹ Việt Nam Anh hùng thành phố Cần Thơ Tập II (2013-2020)", Trang ${mother.page_book} (PDF trang ${mother.page_pdf}) - Ban Tuyên giáo Thành ủy Cần Thơ.`;
+    } else {
+      mCitation.textContent = `Nguồn tư liệu: Danh sách tổng hợp phong tặng, truy tặng danh hiệu vinh dự Nhà nước "Bà mẹ Việt Nam Anh hùng" đến năm 2022 - UBND Phường Phước Thới.`;
+    }
+  }
+
+  // Khung tiếp nhận đóng góp tư liệu và hình ảnh riêng về Mẹ
+  const modalMailContributionBtn = document.getElementById("modalMailContributionBtn");
+  if (modalMailContributionBtn) {
+    const subject = encodeURIComponent(`[Đóng góp tư liệu Mẹ VNAH ${mother.name} - Phường Phước Thới]`);
+    const body = encodeURIComponent(`Kính gửi Ban Chấp hành Đoàn TNCS Hồ Chí Minh Phường Phước Thới,\n\nTôi xin gửi tư liệu, hình ảnh hoặc câu chuyện sưu tầm về Mẹ Việt Nam Anh hùng: ${mother.name} (${mother.birth_death || ''}).\n\n- Thông tin bổ sung:\n- Tệp đính kèm:\n\nTrân trọng!`);
+    modalMailContributionBtn.href = `mailto:doanpphuocthoi@gmail.com?subject=${subject}&body=${body}`;
   }
 
   // Nút thắp hương dâng riêng Mẹ
