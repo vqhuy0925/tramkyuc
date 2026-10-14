@@ -263,7 +263,7 @@ function initMothersGallery() {
       card.className = "mother-card";
       card.setAttribute("data-stt", mother.stt);
 
-      const imgSrc = mother.photo || "assets/images/default-mother.svg";
+      const imgSrc = mother.photo || "assets/images/lotus.webp";
       const pageBadgeHtml = mother.page_book 
         ? `<span class="card-page-badge" title="Trang trong sách gốc">Trang ${mother.page_book}</span>`
         : `<span class="card-page-badge badge-supplement" title="Hồ sơ bổ sung UBND Phường">Hồ sơ 2022</span>`;
@@ -275,7 +275,7 @@ function initMothersGallery() {
             alt="Mẹ VNAH ${mother.name}" 
             class="mother-photo" 
             loading="lazy"
-            onerror="this.onerror=null; this.src='assets/images/default-mother.svg';"
+            onerror="this.onerror=null; this.src='assets/images/lotus.webp';"
           />
           <span class="card-badge-top">${mother.title}</span>
           <span class="card-stt-badge">#${mother.stt}</span>
@@ -343,8 +343,8 @@ function openMotherModal(mother) {
   mName.textContent = "MẸ " + mother.name.toUpperCase();
   mTitle.textContent = (mother.title || "Vinh danh") + " danh hiệu Bà Mẹ Việt Nam Anh Hùng";
   mYears.textContent = mother.birth_death ? `(${mother.birth_death})` : "";
-  mPhoto.src = mother.photo || "assets/images/default-mother.svg";
-  mPhoto.onerror = () => { mPhoto.src = "assets/images/default-mother.svg"; };
+  mPhoto.src = mother.photo || "assets/images/lotus.webp";
+  mPhoto.onerror = () => { mPhoto.src = "assets/images/lotus.webp"; };
 
   if (mDistrict) mDistrict.textContent = mother.district || "TP. Cần Thơ";
   if (mHometown) mHometown.textContent = mother.hometown || "Đang tiếp tục cập nhật";
