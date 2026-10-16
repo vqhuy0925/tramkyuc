@@ -26,14 +26,14 @@ const INITIAL_GUESTBOOK_ENTRIES = [
   {
     id: "init-1",
     author: "Nguyễn Minh Thắng",
-    org: "Đoàn Thanh niên",
-    content: "Đời đời ghi nhớ công ơn trời biển của các Mẹ Việt Nam Anh hùng! Tuổi trẻ Phước Thới nguyện ra sức phấn đấu, học tập và cống hiến để xứng đáng với sự hy sinh cao cả của các Mẹ và các anh hùng liệt sĩ.",
+    org: "Bí thư Đoàn Thanh niên",
+    content: "Đời đời ghi nhớ công ơn trời biển của các Mẹ Việt Nam Anh hùng! Tuổi trẻ nguyện ra sức phấn đấu, học tập và cống hiến để xứng đáng với sự hy sinh cao cả của các Mẹ và các anh hùng liệt sĩ.",
     createdAt: new Date(Date.now() - 3600000 * 24 * 2).toISOString()
   },
   {
     id: "init-2",
     author: "Lê Ngọc Trúc",
-    org: "Chi đoàn khu vực",
+    org: "Đoàn viên",
     content: "Mỗi nén tâm hương thắp lên là một lời tri ân sâu sắc gửi đến các Mẹ. Những người mẹ anh hùng đã dâng hiến những người con thân yêu nhất cho nền độc lập tự do của non sông Đất Nước.",
     createdAt: new Date(Date.now() - 3600000 * 18).toISOString()
   },
@@ -41,7 +41,7 @@ const INITIAL_GUESTBOOK_ENTRIES = [
     id: "init-3",
     author: "Trần Hoàng Nam",
     org: "Đoàn viên",
-    content: "Kính cẩn nghiêng mình trước anh linh các Mẹ VNAH Phước Thới. Chúng con mãi mãi tự hào và khắc ghi trong tim ngọn lửa kiên trung, bất khuất của quê hương Phước Thới anh hùng!",
+    content: "Kính cẩn nghiêng mình trước anh linh các Mẹ VNAH Phước Thới. Chúng con mãi mãi tự hào và khắc ghi trong tim ngọn lửa kiên trung, bất khuất của quê hương anh hùng!",
     createdAt: new Date(Date.now() - 3600000 * 5).toISOString()
   }
 ];
@@ -75,6 +75,27 @@ class MemoryStationService {
     const savedEntries = localStorage.getItem("tramkyuc_guestbook");
     if (!savedEntries) {
       localStorage.setItem("tramkyuc_guestbook", JSON.stringify(INITIAL_GUESTBOOK_ENTRIES));
+    } else {
+      try {
+        let entries = JSON.parse(savedEntries);
+        let changed = false;
+        entries = entries.map((item) => {
+          if (item.org && item.org.includes("Phước Thới")) {
+            item.org = "Bí thư Đoàn Thanh niên";
+            changed = true;
+          }
+          if (item.org && item.org.includes("Trường THCS")) {
+            item.org = "Đoàn viên";
+            changed = true;
+          }
+          return item;
+        });
+        if (changed) {
+          localStorage.setItem("tramkyuc_guestbook", JSON.stringify(entries));
+        }
+      } catch (err) {
+        console.warn("Lỗi đồng bộ lưu bút LocalStorage:", err);
+      }
     }
   }
 
