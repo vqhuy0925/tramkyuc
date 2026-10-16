@@ -1,7 +1,7 @@
 /**
  * TRẠM KÝ ỨC - CONTROLLER CHÍNH
  * Tương tác Tri ân, Trình phát nhạc nền Huyền thoại Mẹ,
- * Bộ lọc 51 Mẹ VNAH và Sổ lưu bút trực tuyến.
+ * Bộ lọc 47 Mẹ VNAH và Sổ lưu bút trực tuyến.
  */
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -213,7 +213,7 @@ function initSmokeCanvas() {
 }
 
 /* ==========================================================================
-   MODULE 3: DANH MỤC & BỘ LỌC 51 MẸ VNAH PHƯỚC THỚI
+   MODULE 3: DANH MỤC & BỘ LỌC 47 MẸ VNAH PHƯỚC THỚI
    ========================================================================== */
 function initMothersGallery() {
   const grid = document.getElementById("mothersGrid");
@@ -222,24 +222,24 @@ function initMothersGallery() {
 
   if (!grid || typeof MOTHERS_DATA === "undefined") return;
 
-  // Mặc định hiển thị danh sách 51 Mẹ VNAH Phường Phước Thới
-  let currentFilter = "phuoc-thoi";
+  // Mặc định hiển thị tất cả 47 Mẹ VNAH Phường Phước Thới
+  let currentFilter = "all";
   let searchKeyword = "";
 
   const renderCards = () => {
     grid.innerHTML = "";
 
     const filtered = MOTHERS_DATA.filter((m) => {
-      // 1. Lọc theo danh mục/địa bàn
-      if (currentFilter === "phuoc-thoi") {
-        if (!m.is_phuoc_thoi) return false;
-      } else if (currentFilter === "thot-not") {
-        if (!m.district || !m.district.includes("Thốt Nốt")) return false;
-      } else if (currentFilter === "phong-dien") {
-        if (!m.district || !m.district.includes("Phong Điền")) return false;
+      // 1. Lọc theo phân loại
+      if (currentFilter === "book") {
+        if (!m.page_book) return false;
+      } else if (currentFilter === "ubnd") {
+        if (m.page_book) return false;
+      } else if (currentFilter === "has-photo") {
+        if (!m.photo || m.photo.includes("lotus.webp") || m.photo.includes("default-mother.svg")) return false;
       }
 
-      // 2. Tìm kiếm theo từ khóa (tên Mẹ, con liệt sĩ, quê quán, số trang...)
+      // 2. Tìm kiếm theo từ khóa (tên Mẹ, con liệt sĩ, quê quán, nơi thờ cúng, số trang...)
       if (searchKeyword) {
         const fullSearchStr = `${m.name} ${m.relatives || ""} ${m.hometown || ""} ${m.worship_address || ""} ${m.district || ""} ${m.page_book ? `trang ${m.page_book} ${m.page_book}` : "hồ sơ 2022"}`.toLowerCase();
         return fullSearchStr.includes(searchKeyword);
@@ -252,7 +252,7 @@ function initMothersGallery() {
       grid.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--color-text-muted);">
           <p style="font-size: 1.1rem; font-weight: 600;">Không tìm thấy thông tin Mẹ phù hợp</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem;">Vui lòng thử tìm theo từ khóa khác hoặc bấm chọn tab "Tất cả tư liệu"</p>
+          <p style="font-size: 0.9rem; margin-top: 0.5rem;">Vui lòng thử tìm theo từ khóa khác hoặc bấm chọn "Tất cả (47 Mẹ)"</p>
         </div>
       `;
       return;

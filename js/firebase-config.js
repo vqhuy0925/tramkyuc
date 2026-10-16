@@ -26,22 +26,22 @@ const INITIAL_GUESTBOOK_ENTRIES = [
   {
     id: "init-1",
     author: "Nguyễn Minh Thắng",
-    org: "Bí thư Đoàn Thanh niên Phường Phước Thới",
+    org: "Đoàn Thanh niên",
     content: "Đời đời ghi nhớ công ơn trời biển của các Mẹ Việt Nam Anh hùng! Tuổi trẻ Phước Thới nguyện ra sức phấn đấu, học tập và cống hiến để xứng đáng với sự hy sinh cao cả của các Mẹ và các anh hùng liệt sĩ.",
     createdAt: new Date(Date.now() - 3600000 * 24 * 2).toISOString()
   },
   {
     id: "init-2",
     author: "Lê Ngọc Trúc",
-    org: "Chi đoàn Trường THCS Phước Thới",
+    org: "Chi đoàn khu vực",
     content: "Mỗi nén tâm hương thắp lên là một lời tri ân sâu sắc gửi đến các Mẹ. Những người mẹ anh hùng đã dâng hiến những người con thân yêu nhất cho nền độc lập tự do của non sông Đất Nước.",
     createdAt: new Date(Date.now() - 3600000 * 18).toISOString()
   },
   {
     id: "init-3",
     author: "Trần Hoàng Nam",
-    org: "Đoàn viên Chi đoàn Khu vực Thới Hòa",
-    content: "Kính cẩn nghiêng mình trước anh linh các Mẹ VNAH Phước Thới. Chúng con mãi mãi tự hào và khắc ghi trong tim ngọn lửa kiên trung, bất khuất của quê hương Ô Môn anh hùng!",
+    org: "Đoàn viên",
+    content: "Kính cẩn nghiêng mình trước anh linh các Mẹ VNAH Phước Thới. Chúng con mãi mãi tự hào và khắc ghi trong tim ngọn lửa kiên trung, bất khuất của quê hương Phước Thới anh hùng!",
     createdAt: new Date(Date.now() - 3600000 * 5).toISOString()
   }
 ];
@@ -106,7 +106,7 @@ class MemoryStationService {
         console.warn("Lỗi ghi Firestore, ghi vào LocalStorage:", err);
       }
     }
-    
+
     const cur = localStorage.getItem("tramkyuc_candle_count");
     newCount = (cur ? parseInt(cur, 10) : this.candleCount) + 1;
     localStorage.setItem("tramkyuc_candle_count", newCount.toString());

@@ -16,7 +16,7 @@
    - Bộ đếm thời gian thực số lượt thắp nến của nhân dân cả nước.
 3. **Danh mục 47 Mẹ VNAH Phước Thới**:
    - Tìm kiếm nhanh tức thì theo tên Mẹ hoặc tên thân nhân là Liệt sĩ.
-   - Bộ lọc phân loại: Phường Phước Thới, Tất cả, Quận Thốt Nốt, Huyện Phong Điền.
+   - Bộ lọc phân loại: Tất cả (47 Mẹ), Sách Tập II (31 Mẹ), Hồ sơ UBND Phường (16 Mẹ), Có ảnh chân dung.
    - Thẻ hình ảnh chân dung trang trọng hoặc biểu tượng Hoa sen vàng đối với các hồ sơ đang tiếp tục sưu tầm ảnh.
    - Hộp tiếp nhận tư liệu một chạm mở email gửi trực tiếp về Ban Chấp hành Đoàn phường.
 4. **Hồ sơ Ký ức chi tiết (Chuẩn Mobile 3-Zone Flexbox)**:
