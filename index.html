@@ -295,8 +295,13 @@
       <!-- Zone 2: Body (flex-1 overflow-y-auto min-h-0) -->
       <div class="modal-body">
         <div class="modal-mother-lead">
-          <div class="modal-photo-frame">
+          <div class="modal-photo-frame" id="modalPhotoContainer" title="Bấm để phóng to xem trọn vẹn tư liệu" role="button" tabindex="0" aria-label="Phóng to ảnh">
+            <img id="modalMotherPhotoBlur" src="assets/images/lotus.webp" alt="" class="modal-photo-blur" aria-hidden="true" />
             <img id="modalMotherPhoto" src="assets/images/lotus.webp" alt="Chân dung Mẹ" class="modal-photo" />
+            <div class="modal-photo-zoom-hint" aria-hidden="true">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+              <span>Xem trọn ảnh</span>
+            </div>
           </div>
           <div class="modal-lead-info">
             <span id="modalMotherTitle" class="modal-m-title">Bà Mẹ Việt Nam Anh Hùng</span>
@@ -355,6 +360,42 @@
           <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-.5 0-1 .4-1 .9 0 .2.1.4.2.6C10.5 4.6 9 7.2 9 10c0 1.7.7 3.2 1.8 4.2C10.3 14.5 10 15 10 15.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5c0-.5-.3-1-.8-1.3 1.1-1 1.8-2.5 1.8-4.2 0-2.8-1.5-5.4-2.2-6.5.1-.2.2-.4.2-.6 0-.5-.5-.9-1-.9zm-7 16v4h14v-4H5z"/></svg>
           Thắp hương dâng Mẹ
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FULLSCREEN LIGHTBOX MODAL (XEM TRỌN KHUNG ẢNH GỐC / BẰNG KHEN / DI ẢNH)
+       ========================================================================== -->
+  <div id="imageLightboxModal" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Xem trọn khung ảnh" style="display: none;">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-topbar">
+        <div class="lightbox-title-box">
+          <span class="lightbox-kicker">Tư liệu Di sản Lịch sử</span>
+          <h3 id="lightboxTitle" class="lightbox-heading">MẸ NGUYỄN THỊ BA</h3>
+        </div>
+        <div class="lightbox-actions">
+          <a id="lightboxDownloadBtn" href="#" target="_blank" rel="noopener" class="lightbox-btn" title="Mở ảnh gốc trong tab mới">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            <span class="lightbox-btn-text">Ảnh gốc</span>
+          </a>
+          <button id="lightboxCloseBtn" class="lightbox-close-btn" type="button" aria-label="Đóng xem ảnh">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="lightbox-main-stage">
+        <div class="lightbox-img-frame">
+          <img id="lightboxBlurBg" src="" alt="" class="lightbox-ambient-blur" aria-hidden="true" />
+          <img id="lightboxImage" src="" alt="Tư liệu ảnh Mẹ VNAH" class="lightbox-image" />
+        </div>
+      </div>
+
+      <div class="lightbox-bottom-info">
+        <p id="lightboxCitation" class="lightbox-caption-text">Ban Tuyên giáo Thành ủy Cần Thơ</p>
+        <span class="lightbox-hint">Chạm ra ngoài hoặc nhấn phím Esc để đóng</span>
       </div>
     </div>
   </div>

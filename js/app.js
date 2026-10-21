@@ -269,17 +269,29 @@ function initMothersGallery() {
         : `<span class="card-page-badge badge-supplement" title="Hồ sơ bổ sung UBND Phường">Hồ sơ 2022</span>`;
 
       card.innerHTML = `
-        <div class="card-img-wrap">
+        <div class="card-img-wrap" title="Bấm để xem hồ sơ và trọn khung ảnh">
+          <img 
+            src="${imgSrc}" 
+            alt="" 
+            class="card-ambient-blur" 
+            aria-hidden="true" 
+            loading="lazy"
+          />
           <img 
             src="${imgSrc}" 
             alt="Mẹ VNAH ${mother.name}" 
             class="mother-photo" 
             loading="lazy"
-            onerror="this.onerror=null; this.src='assets/images/lotus.webp';"
+            onerror="this.onerror=null; this.src='assets/images/lotus.webp'; if(this.previousElementSibling) this.previousElementSibling.src='assets/images/lotus.webp';"
           />
+          <div class="card-gold-inner-border" aria-hidden="true"></div>
           <span class="card-badge-top">${mother.title}</span>
           <span class="card-stt-badge">#${mother.stt}</span>
           ${pageBadgeHtml}
+          <div class="card-view-hint" aria-hidden="true">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            <span>Trọn khung</span>
+          </div>
         </div>
         <div class="card-body">
           <h3 class="mother-name">${mother.name}</h3>
@@ -330,6 +342,8 @@ function openMotherModal(mother) {
   const mTitle = document.getElementById("modalMotherTitle");
   const mYears = document.getElementById("modalMotherYears");
   const mPhoto = document.getElementById("modalMotherPhoto");
+  const mPhotoBlur = document.getElementById("modalMotherPhotoBlur");
+  const photoContainer = document.getElementById("modalPhotoContainer");
   const mDistrict = document.getElementById("modalMotherDistrict");
   const mHometown = document.getElementById("modalMotherHometown");
   const mRelatives = document.getElementById("modalMotherRelatives");
@@ -343,8 +357,27 @@ function openMotherModal(mother) {
   mName.textContent = "MẸ " + mother.name.toUpperCase();
   mTitle.textContent = (mother.title || "Vinh danh") + " danh hiệu Bà Mẹ Việt Nam Anh Hùng";
   mYears.textContent = mother.birth_death ? `(${mother.birth_death})` : "";
-  mPhoto.src = mother.photo || "assets/images/lotus.webp";
-  mPhoto.onerror = () => { mPhoto.src = "assets/images/lotus.webp"; };
+  
+  const photoSrc = mother.photo || "assets/images/lotus.webp";
+  if (mPhoto) {
+    mPhoto.src = photoSrc;
+    mPhoto.onerror = () => { mPhoto.src = "assets/images/lotus.webp"; };
+  }
+  if (mPhotoBlur) {
+    mPhotoBlur.src = photoSrc;
+    mPhotoBlur.onerror = () => { mPhotoBlur.src = "assets/images/lotus.webp"; };
+  }
+
+  // Tương tác mở xem ảnh trọn vẹn phóng to
+  if (photoContainer) {
+    photoContainer.onclick = () => openLightbox(mother);
+    photoContainer.onkeydown = (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openLightbox(mother);
+      }
+    };
+  }
 
   if (mDistrict) mDistrict.textContent = mother.district || "TP. Cần Thơ";
   if (mHometown) mHometown.textContent = mother.hometown || "Đang tiếp tục cập nhật";
@@ -407,7 +440,49 @@ function closeMotherModal() {
   document.body.style.overflow = "";
 }
 
-// Bắt sự kiện đóng modal
+/* ==========================================================================
+   MODULE 4B: FULLSCREEN LIGHTBOX (XEM TRỌN KHUNG ẢNH GỐC / BẰNG KHEN)
+   ========================================================================== */
+function openLightbox(mother) {
+  const lightbox = document.getElementById("imageLightboxModal");
+  if (!lightbox) return;
+
+  const lbImg = document.getElementById("lightboxImage");
+  const lbBlur = document.getElementById("lightboxBlurBg");
+  const lbTitle = document.getElementById("lightboxTitle");
+  const lbCitation = document.getElementById("lightboxCitation");
+  const lbDownload = document.getElementById("lightboxDownloadBtn");
+
+  const src = mother.photo || "assets/images/lotus.webp";
+  if (lbImg) {
+    lbImg.src = src;
+    lbImg.alt = `Tư liệu hình ảnh Mẹ ${mother.name}`;
+  }
+  if (lbBlur) lbBlur.src = src;
+  if (lbTitle) lbTitle.textContent = `MẸ ${mother.name.toUpperCase()} ${mother.birth_death ? `(${mother.birth_death})` : ""}`;
+  if (lbDownload) lbDownload.href = src;
+  if (lbCitation) {
+    lbCitation.textContent = mother.page_book
+      ? `Nguồn: Sách "Bà mẹ Việt Nam Anh hùng TP. Cần Thơ Tập II" - Trang ${mother.page_book} (PDF trang ${mother.page_pdf})`
+      : `Nguồn: Danh sách tổng hợp UBND Phường Phước Thới`;
+  }
+
+  lightbox.style.display = "flex";
+  requestAnimationFrame(() => {
+    lightbox.classList.add("active");
+  });
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById("imageLightboxModal");
+  if (!lightbox) return;
+  lightbox.classList.remove("active");
+  setTimeout(() => {
+    lightbox.style.display = "none";
+  }, 220);
+}
+
+// Bắt sự kiện đóng modal & lightbox
 document.addEventListener("DOMContentLoaded", () => {
   const modalCloseBtn = document.getElementById("modalCloseBtn");
   const modalDismissBtn = document.getElementById("modalDismissBtn");
@@ -422,8 +497,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Lightbox handlers
+  const lightboxCloseBtn = document.getElementById("lightboxCloseBtn");
+  const lightboxBackdrop = document.getElementById("lightboxBackdrop");
+  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener("click", closeLightbox);
+  if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMotherModal();
+    if (e.key === "Escape") {
+      const lightbox = document.getElementById("imageLightboxModal");
+      if (lightbox && lightbox.classList.contains("active")) {
+        closeLightbox();
+      } else {
+        closeMotherModal();
+      }
+    }
   });
 });
 
