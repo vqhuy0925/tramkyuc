@@ -1,6 +1,6 @@
 # TRẠM KÝ ỨC - MẸ VIỆT NAM ANH HÙNG PHƯỜNG PHƯỚC THỚI
 
-> **Công trình số hóa lịch sử và đền ơn đáp nghĩa** do Đoàn TNCS Hồ Chí Minh Phường Phước Thới phối hợp thực hiện.  
+> **Công trình số hóa lịch sử và đền ơn đáp nghĩa** do Đoàn TNCS Hồ Chí Minh Phường Phước Thới, Thành phố Cần Thơ phối hợp thực hiện.  
 > Lưu giữ hình ảnh, công trạng và lòng biết ơn của thế hệ trẻ đối với **47 Bà mẹ Việt Nam Anh hùng (VNAH)** của quê hương Phước Thới, Thành phố Cần Thơ.
 > 
 > ✉️ **Hòm thư tiếp nhận đóng góp tư liệu & hình ảnh:** [doanpphuocthoi@gmail.com](mailto:doanpphuocthoi@gmail.com)
