@@ -26,10 +26,35 @@
   --shadow-gold: 0 0 25px rgba(245, 158, 11, 0.35);
   --shadow-candle: 0 0 35px rgba(251, 191, 36, 0.55);
 
-  --font-serif: 'Lora', 'Playfair Display', 'Merriweather', Georgia, serif;
-  --font-sans: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
   
   --header-height: 74px;
+  --ease-base: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-base: 500ms;
+  --duration-fast: 300ms;
+}
+
+/* Accessibility: Skip to Content */
+.skip-to-content {
+  position: absolute;
+  top: -9999px;
+  left: 1rem;
+  z-index: 99999;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: top var(--duration-fast) var(--ease-base);
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+  outline: 3px solid var(--color-gold-bright);
 }
 
 /* Reset & Base Rules */
@@ -348,8 +373,7 @@ p, li, span, input, textarea {
   color: var(--color-gold-bright);
   font-size: 1.45rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   margin-bottom: 0.5rem;
   text-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
 }
@@ -489,6 +513,16 @@ p, li, span, input, textarea {
   transform: scale(0.96);
 }
 
+.tribute-action-btn.pulse-highlight {
+  animation: pulseGlow 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.8); }
+  50% { box-shadow: 0 0 0 20px rgba(251, 191, 36, 0); }
+  100% { box-shadow: 0 8px 25px rgba(217, 119, 6, 0.45); }
+}
+
 .tribute-action-btn svg {
   width: 22px;
   height: 22px;
@@ -547,7 +581,74 @@ p, li, span, input, textarea {
 }
 
 /* ==========================================================================
-   GALLERY OF 51 MOTHERS
+   TAGLINE REVEAL SECTION (B11 - WORD-BY-WORD SCROLL REVEAL)
+   ========================================================================== */
+.tagline-section {
+  padding: 5.5rem 0 4.5rem;
+  background-color: var(--color-bg-paper-warm);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.tagline-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tagline-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: rgba(136, 19, 55, 0.08);
+  border: 1px solid rgba(136, 19, 55, 0.22);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+
+.tagline-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.8vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--color-primary-dark);
+  text-wrap: balance;
+  margin-bottom: 2rem;
+}
+
+/* Individual word tokens for scroll reveal */
+.tagline-word {
+  display: inline-block;
+  margin-right: 0.28em;
+  color: var(--color-primary-dark);
+  opacity: 0.24;
+  transform: translateY(6px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.tagline-word.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tagline-divider {
+  width: 64px;
+  height: 3px;
+  background: var(--color-gold);
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+/* ==========================================================================
+   GALLERY OF 47 MOTHERS
    ========================================================================== */
 .gallery-section {
   padding: 4.5rem 0 5rem;
@@ -1171,8 +1272,7 @@ p, li, span, input, textarea {
 }
 
 .citation-notice {
-  font-size: 0.8rem;
-  font-style: italic;
+  font-size: 0.82rem;
   color: var(--color-text-muted);
   background: rgba(217, 119, 6, 0.08);
   border-left: 3px solid var(--color-gold);
@@ -1369,6 +1469,210 @@ p, li, span, input, textarea {
 }
 
 /* ==========================================================================
+   FAQ SECTION: TƯ LIỆU LỊCH SỬ & GIẢI ĐÁP
+   ========================================================================== */
+.faq-section {
+  padding: 5rem 0;
+  background-color: var(--color-bg-paper);
+}
+
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: #FFFFFF;
+  overflow: hidden;
+  transition: border-color var(--duration-fast) var(--ease-base),
+              box-shadow var(--duration-fast) var(--ease-base);
+}
+
+.faq-item:hover {
+  border-color: var(--color-border-gold);
+}
+
+.faq-item.active {
+  border-color: var(--color-gold);
+  box-shadow: 0 4px 18px rgba(217, 119, 6, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.4rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: color var(--duration-fast) var(--ease-base);
+}
+
+.faq-question:hover {
+  color: var(--color-primary);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  margin-left: 1rem;
+  color: var(--color-gold);
+  transition: transform var(--duration-fast) var(--ease-base);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-base),
+              padding 0.4s var(--ease-base);
+  padding: 0 1.4rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 280px;
+  padding: 0 1.4rem 1.4rem;
+}
+
+.faq-answer p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.faq-mail-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   FINAL CTA: TIẾP NỐI NGỌN LỬA TRI ÂN
+   ========================================================================== */
+.final-cta-section {
+  padding: 2rem 0 5rem;
+  background-color: var(--color-bg-paper);
+}
+
+.final-cta-card {
+  background: linear-gradient(180deg, #2D080E 0%, #160407 100%);
+  border: 2px solid var(--color-gold);
+  border-radius: 20px;
+  padding: 3.5rem 1.75rem;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  box-shadow: 0 20px 50px rgba(45, 8, 14, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid var(--color-gold);
+  border-radius: 9999px;
+  color: var(--color-gold-bright);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.final-cta-title {
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  color: var(--color-gold-bright);
+  font-family: var(--font-serif);
+  margin-bottom: 0.9rem;
+  line-height: 1.3;
+}
+
+.final-cta-desc {
+  color: #E2E8F0;
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin: 0 auto 2.2rem;
+  line-height: 1.65;
+  opacity: 0.9;
+}
+
+.final-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-primary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.85rem;
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+  color: #1C1917;
+  font-weight: 700;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+  transition: transform var(--duration-fast) var(--ease-base),
+              box-shadow var(--duration-fast) var(--ease-base);
+  min-height: 48px;
+}
+
+.btn-primary-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(217, 119, 6, 0.55);
+}
+
+.btn-primary-cta:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.85rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background var(--duration-fast) var(--ease-base),
+              transform var(--duration-fast) var(--ease-base);
+  min-height: 48px;
+}
+
+.btn-secondary-cta:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+.btn-secondary-cta:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
    FOOTER SECTION
    ========================================================================== */
 .site-footer {
@@ -1416,6 +1720,34 @@ p, li, span, input, textarea {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.8rem;
   color: #94A3B8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-sublink {
+  color: #94A3B8;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-base);
+}
+
+.footer-sublink:hover {
+  color: var(--color-gold-bright);
+}
+
+.footer-link-divider {
+  color: #64748B;
+  font-size: 0.75rem;
 }
 
 /* ==========================================================================
@@ -1763,7 +2095,6 @@ p, li, span, input, textarea {
 .lightbox-caption-text {
   font-size: 0.82rem;
   color: var(--color-gold-bright);
-  font-style: italic;
 }
 
 .lightbox-hint {

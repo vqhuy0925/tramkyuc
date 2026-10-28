@@ -11,8 +11,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 2. Khởi tạo các module
   initAudioPlayer();
   initAltarInteractions();
+  initTaglineReveal();
   initMothersGallery();
   initGuestbook();
+  initFaqAccordion();
+  initFinalCtaInteractions();
   initNavigationScroll();
 });
 
@@ -354,7 +357,7 @@ function openMotherModal(mother) {
   const mCitation = document.getElementById("modalMotherCitation");
   const altarThisMotherBtn = document.getElementById("altarThisMotherBtn");
 
-  mName.textContent = "MẸ " + mother.name.toUpperCase();
+  mName.textContent = "Mẹ " + mother.name;
   mTitle.textContent = (mother.title || "Vinh danh") + " danh hiệu Bà Mẹ Việt Nam Anh Hùng";
   mYears.textContent = mother.birth_death ? `(${mother.birth_death})` : "";
   
@@ -459,7 +462,7 @@ function openLightbox(mother) {
     lbImg.alt = `Tư liệu hình ảnh Mẹ ${mother.name}`;
   }
   if (lbBlur) lbBlur.src = src;
-  if (lbTitle) lbTitle.textContent = `MẸ ${mother.name.toUpperCase()} ${mother.birth_death ? `(${mother.birth_death})` : ""}`;
+  if (lbTitle) lbTitle.textContent = `Mẹ ${mother.name} ${mother.birth_death ? `(${mother.birth_death})` : ""}`;
   if (lbDownload) lbDownload.href = src;
   if (lbCitation) {
     lbCitation.textContent = mother.page_book
@@ -628,4 +631,99 @@ function initNavigationScroll() {
       header?.classList.remove("scrolled");
     }
   });
+}
+
+/* ==========================================================================
+   MODULE 5: TAGLINE WORD-BY-WORD SCROLL REVEAL (B11)
+   ========================================================================== */
+function initTaglineReveal() {
+  const heading = document.getElementById("taglineHeading");
+  if (!heading) return;
+
+  const rawText = heading.textContent.trim();
+  const words = rawText.split(/\s+/);
+  heading.innerHTML = "";
+
+  words.forEach((word) => {
+    const span = document.createElement("span");
+    span.className = "tagline-word";
+    span.textContent = word;
+    heading.appendChild(span);
+  });
+
+  const wordSpans = heading.querySelectorAll(".tagline-word");
+  if (!("IntersectionObserver" in window)) {
+    wordSpans.forEach((w) => w.classList.add("active"));
+    return;
+  }
+
+  // Kích hoạt từng từ lần lượt theo nhịp đọc khi cuộn vào viewport
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        wordSpans.forEach((w, index) => {
+          setTimeout(() => {
+            w.classList.add("active");
+          }, index * 42);
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.35,
+    rootMargin: "0px 0px -8% 0px"
+  });
+
+  observer.observe(heading);
+}
+
+/* ==========================================================================
+   MODULE 6: FAQ ACCORDION INTERACTION
+   ========================================================================== */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach((item) => {
+    const btn = item.querySelector(".faq-question");
+    if (!btn) return;
+
+    btn.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      // Đóng các mục khác để giữ giao diện gọn gàng
+      faqItems.forEach((other) => {
+        other.classList.remove("active");
+        const otherBtn = other.querySelector(".faq-question");
+        if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+      });
+
+      if (!isActive) {
+        item.classList.add("active");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   MODULE 7: FINAL CTA SCROLL & TRIBUTE TRIGGER
+   ========================================================================== */
+function initFinalCtaInteractions() {
+  const scrollAltarBtn = document.getElementById("ctaScrollAltar");
+  if (scrollAltarBtn) {
+    scrollAltarBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const hero = document.getElementById("hero");
+      if (hero) {
+        hero.scrollIntoView({ behavior: "smooth" });
+        const lightBtn = document.getElementById("lightCandleBtn");
+        if (lightBtn) {
+          setTimeout(() => {
+            lightBtn.focus();
+            lightBtn.classList.add("pulse-highlight");
+            setTimeout(() => lightBtn.classList.remove("pulse-highlight"), 1200);
+          }, 600);
+        }
+      }
+    });
+  }
 }
